@@ -46,20 +46,20 @@ class ApplicationController < ActionController::API
         end
     end
 
-    def test
-        if params.has_key?(:login) #checks if params hash has key ":login"
-            login!(User.first) #if so, call the login! method, passing in User.first
-        elsif params.has_key?(:logout) #checks if params hash has key ":logout"
-            logout! #if so, call the logout! method
-        end
+    # def test
+    #     if params.has_key?(:login) #checks if params hash has key ":login"
+    #         login!(User.first) #if so, call the login! method, passing in User.first
+    #     elsif params.has_key?(:logout) #checks if params hash has key ":logout"
+    #         logout! #if so, call the logout! method
+    #     end
 
-        if current_user 
-            #if current_user exists, renders JSON response containing id, username, session_token
-            render json: { user: current_user.slice('id', 'email', 'session_token') }
-        else
-            render json: ['No current user']
-        end
-    end
+    #     if current_user 
+    #         #if current_user exists, renders JSON response containing id, username, session_token
+    #         render json: { user: current_user.slice('id', 'email', 'session_token') }
+    #     else
+    #         render json: ['No current user']
+    #     end
+    # end
     
     private
     def snake_case_params

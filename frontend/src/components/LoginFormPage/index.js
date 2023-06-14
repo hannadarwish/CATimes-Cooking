@@ -28,27 +28,27 @@ function LoginFormPage() {
         // inside session.js, in the thunk login function, if the login request is successful, it dispatches "setCurrentUser" action with the user data received from server
         return dispatch(sessionActions.login({ email, password }))
 
-        .catch((error) => {
-            // console.log('Error:', error);
-            // console.log(error.message)
-            setErrors([error.statusText]);
-          });
-            // // if there is an error in login, the .catch block is run
-            // .catch(async (res) => {
-            //     let data;
-            //     try {
-            //         // .clone() essentially allows you to read the response body twice
-            //         data = await res.clone().json();
-            //     } catch {
-            //         data = await res.text(); // Will hit this case if the server is down
-            //     }
-            //     // if there are data.errors, it means the server responded with a specific error message.
-            //     // so it sets the errors state to "data.errors" by using "setErrors(data.errors)"
-            //     if (data?.errors) setErrors(data.errors);
-            //     // if there is no data, an unexpected response was received so it sets errors state to "[res.statusText]"
-            //     else if (data) setErrors([data]);
-            //     else setErrors([res.statusText]);
-            // });
+        // .catch((error) => {
+        //     // console.log('Error:', error);
+        //     // console.log(error.message)
+        //     setErrors([error.statusText]);
+        // });
+            // if there is an error in login, the .catch block is run
+            .catch(async (res) => {
+                let data;
+                try {
+                    // .clone() essentially allows you to read the response body twice
+                    data = await res.clone().json();
+                } catch {
+                    data = await res.text(); // Will hit this case if the server is down
+                }
+                // if there are data.errors, it means the server responded with a specific error message.
+                // so it sets the errors state to "data.errors" by using "setErrors(data.errors)"
+                if (data?.errors) setErrors(data.errors);
+                // if there is no data, an unexpected response was received so it sets errors state to "[res.statusText]"
+                else if (data) setErrors([data]);
+                else setErrors([res.statusText]);
+            });
     }
 
     return (

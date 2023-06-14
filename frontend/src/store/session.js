@@ -19,24 +19,42 @@ const removeCurrentUser = () => {
     };
 };
 
+const storeCSRFToken = response => {
+    const csrfToken = response.headers.get("X-CSRF-Token");
+    if (csrfToken) sessionStorage.setItem("X-CSRF-Token", csrfToken);
+}
 
-// Thunk Action creator (returns an object instead of POJO)
+const storeCurrentUser = user => {
+    if (user) sessionStorage.setItem("currentUser", JSON.stringify(user));
+    else sessionStorage.removeItem("currentUser");
+}
+
+
+// Thunk Action creators (returns an object instead of POJO)
 // performs an async login request to the server, dispatching actions based on the response
-export const login = (user) => async (dispatch) => {
-    const { email, password } = user;
-    const response = await csrfFetch('/api/session', {
-        method: 'POST',
-        body: JSON.stringify({
-            email,
-            password
-        })
+export const login = ({ email, password }) => async dispatch => {
+    const response = await csrfFetch("/api/session", {
+        method: "POST",
+        body: JSON.stringify({ email, password })
     });
     const data = await response.json();
+    storeCurrentUser(data.user);
     dispatch(setCurrentUser(data.user));
     return response;
 };
 
-const initialState = { user: null };
+export const restoreSession = () => async dispatch => {
+    const response = await csrfFetch("/api/session");
+    storeCSRFToken(response);
+    const data = await response.json();
+    storeCurrentUser(data.user);
+    dispatch(setCurrentUser(data.user));
+    return response;
+}
+
+const initialState = { 
+    user: JSON.parse(sessionStorage.getItem("currentUser"))
+};
 
 // Session Reducer
 const sessionReducer = (state = initialState, action) => {

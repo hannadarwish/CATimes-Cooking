@@ -1,23 +1,22 @@
 
 import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
-import { useDispatch, useSelector } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import './LoginForm.css';
 
-function LoginFormPage() {
+function LoginForm() {
     //dispatch allows you to dispatch actions to store and trigger state updates
     //use it in conjunction with action creators to dispatch actions.
     const dispatch = useDispatch(); 
     // select the "user" property from the "session" slice of state.
     //useSelector subscribes the component to the selected state value
     // by using sessionUser variable, the component can check if a user is currently logged in (sessionUser is truthy)
-    const sessionUser = useSelector(state => state.session.user);
+    // const sessionUser = useSelector(state => state.session.user);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState([]);
 
-    if (sessionUser) return <Redirect to="/" />;
+    // if (sessionUser) return <Redirect to="/" />;
 
     const handleSubmit = (e) => {
         // prevent default to prevent reloading page when submitting
@@ -85,4 +84,4 @@ function LoginFormPage() {
     );
 }
 
-export default LoginFormPage;
+export default LoginForm;

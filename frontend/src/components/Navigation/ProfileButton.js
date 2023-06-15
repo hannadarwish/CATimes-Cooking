@@ -1,4 +1,4 @@
-import { BiSolidUser } from 'react-icons/fa';
+import { FaUser } from 'react-icons/fa';
 import React, { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
@@ -32,7 +32,7 @@ function ProfileButton({ user }) {
     return (
         <>
             <button onClick={openMenu}> 
-                PROFILE BUTTON
+                <FaUser />
             </button>
             {showMenu && (
                 <ul className="profile-dropdown">

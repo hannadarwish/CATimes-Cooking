@@ -56,6 +56,21 @@ const initialState = {
     user: JSON.parse(sessionStorage.getItem("currentUser"))
 };
 
+export const signup = (user) => async (dispatch) => {
+    const { email, password } = user;
+    const response = await csrfFetch("/api/users", {
+        method: "POST",
+        body: JSON.stringify({
+        email,
+        password
+        })
+    });
+    const data = await response.json();
+    storeCurrentUser(data.user);
+    dispatch(setCurrentUser(data.user));
+    return response;
+};
+
 // Session Reducer
 const sessionReducer = (state = initialState, action) => {
     switch (action.type) {

@@ -1,0 +1,41 @@
+.nav {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+#cyt-site-logo {
+    background: url(https://static01.nyt.com/applications/cooking/a5ef9cf/assets/spriteRecipeIcons.svg) no-repeat center center;
+    background-position: 0 0.19px;
+    background-size: 100%;
+    box-sizing: border-box;
+    display: block;
+    height: 24.14px;
+    width: 131px;
+}
+
+#subscribe-button {
+    border-radius: 20px;
+    border: 1px solid #e33d26;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #e33d26;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#subscribe-button:hover {
+    background-color: #c92c16;
+}

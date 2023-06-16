@@ -17,14 +17,15 @@ function Navigation() {
         sessionLinks = (
             <>
                 <LoginFormModal />
-                <NavLink to="/signup">Sign Up</NavLink>
+                <NavLink to="/signup" id="subscribe-button">Subscribe</NavLink>
             </>
         );
     }
 
     return (
-        <ul>
-            <li>
+        <ul class="nav">
+            <div id="cyt-site-logo"></div>
+            <li class="nav-buttons">
             <NavLink exact to="/">Home</NavLink>
             {sessionLinks}
             </li>

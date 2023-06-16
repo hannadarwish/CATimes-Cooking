@@ -71,7 +71,7 @@ function SignupFormPage() {
                 />
             </label>
             <br/>
-            <button type="submit">Sign up</button>
+            <button id="signup-button" type="submit">Sign up</button>
         </form>
     );
     }

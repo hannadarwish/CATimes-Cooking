@@ -56,8 +56,8 @@ function LoginForm() {
             <ul>
                 {errors.map(error => <li key={error}>{error}</li>)}
             </ul>
-            <h2>Log in to CYT Cooking</h2>
-            <label>
+            <h2 id="login-modal-text">Log in to CFT Cooking</h2>
+            <label id="email">
                 Email Address
                 <br/>
                 <input
@@ -68,7 +68,7 @@ function LoginForm() {
                 />
             </label>
             <br/>
-            <label>
+            <label id="password">
                 Password
                 <br/>
                 <input
@@ -79,7 +79,7 @@ function LoginForm() {
                 />
             </label>
             <br/>
-            <button type="submit">Log In</button>
+            <button id="login-modal-button" type="submit">Log In</button>
         </form>
     );
 }

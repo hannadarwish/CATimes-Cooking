@@ -52,35 +52,37 @@ function LoginForm() {
 
     return (
         // when form is submitted, the component re-renders, displaying any error messages in the <ul> element using errors.map
-        <form onSubmit={handleSubmit}>
-            <ul>
-                {errors.map(error => <li key={error}>{error}</li>)}
-            </ul>
-            <h2 id="login-modal-text">Log in to CFT Cooking</h2>
-            <label id="email">
-                Email Address
+        <div class="form-container">
+            <form class="login-form" onSubmit={handleSubmit}>
+                <ul>
+                    {errors.map(error => <li key={error}>{error}</li>)}
+                </ul>
+                <h2 id="login-modal-text">Log in to CFT Cooking</h2>
+                <label id="email">
+                    <span id="email-text">Email Address</span>
+                    <br/>
+                    <input
+                        type="text"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                </label>
                 <br/>
-                <input
-                    type="text"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
-            </label>
-            <br/>
-            <label id="password">
-                Password
+                <label id="password">
+                    <span id="password-text">Password</span>
+                    <br/>
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                </label>
                 <br/>
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-            </label>
-            <br/>
-            <button id="login-modal-button" type="submit">Log In</button>
-        </form>
+                <button id="login-modal-button" type="submit">Log In</button>
+            </form>
+        </div>
     );
 }
 

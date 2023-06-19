@@ -30,6 +30,11 @@ export function Modal({ onClose, children }) {
         <div id="modal">
             <div id="modal-background" onClick={onClose} />
             <div id="modal-content">
+            <div class="login-picture-container">
+                <span class="login-img-blurb">
+                Unlock Chew Fork Times recipes and your personal recipe box with a free account.
+                </span>
+            </div>
             {children}
             </div>
         </div>,

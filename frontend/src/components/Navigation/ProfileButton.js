@@ -31,16 +31,13 @@ function ProfileButton({ user }) {
 
     return (
         <>
-            <button onClick={openMenu}> 
+            <button id="profile-button" onClick={openMenu}> 
                 <FaUser />
             </button>
             {showMenu && (
-                <ul className="profile-dropdown">
-                    <li>{user.email}</li>
-                    <h1>Good Afternoon</h1>
-                    <h1>YOUR SUBSCRIPTION</h1>
-                    <span>All Access</span>
+                <ul className="profile-sidebar">
                     <li>
+                        Profile pop out
                         <button onClick={logout}>Log Out</button>
                     </li>
                 </ul>

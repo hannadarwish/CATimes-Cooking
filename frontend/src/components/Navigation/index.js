@@ -5,6 +5,7 @@ import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import './Navigation.css';
 import SignupFormModal from '../SignupFormModal';
+import RecipeBoxButton from './RecipeBoxButton';
 
 function Navigation() {
     const sessionUser = useSelector(state => state.session.user);
@@ -12,7 +13,10 @@ function Navigation() {
     let sessionLinks;
     if (sessionUser) {
         sessionLinks = (
-            <ProfileButton user={sessionUser} />
+            <>
+                <RecipeBoxButton />
+                <ProfileButton user={sessionUser} />
+            </>
         );
     } else {
         sessionLinks = (
@@ -33,7 +37,7 @@ function Navigation() {
             <li className="nav-buttons">
                 {/* <NavLink exact to="/">Home</NavLink> */}
                 {/* need to change EWD link */}
-                <NavLink className ="easy-weeknight-dinners-nav"exact to="/">Easy Weeknight Dinners</NavLink>
+                <NavLink className ="easy-weeknight-dinners-nav"exact to="/easyweeknightdinners">Easy Weeknight Dinners</NavLink>
                 {sessionLinks}
             </li>
         </ul>

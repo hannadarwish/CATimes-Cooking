@@ -24,10 +24,17 @@ function Navigation() {
 
     return (
         <ul class="nav">
-            <div id="cyt-site-logo"></div>
+            <div class="cyt-site-logo-container">
+                <div id="cyt-site-logo"></div>
+            </div>
+            <div>
+
+            </div>
             <li class="nav-buttons">
-            <NavLink exact to="/">Home</NavLink>
-            {sessionLinks}
+                {/* <NavLink exact to="/">Home</NavLink> */}
+                {/* need to change EWD link */}
+                <NavLink class ="easy-weeknight-dinners-nav"exact to="/">Easy Weeknight Dinners</NavLink>
+                {sessionLinks}
             </li>
         </ul>
     );

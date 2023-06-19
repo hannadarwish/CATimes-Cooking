@@ -37,11 +37,13 @@ function SignupFormPage() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form class="sign-up-form" onSubmit={handleSubmit}>
             <ul>
                 {errors.map(error => <li key={error}>{error}</li>)}
             </ul>
-            <label>Email
+            <h2 id="signup-modal-text">Enter your email address and choose a password to create an account.</h2>
+            <label id="sign-up-email">
+                <span id="email-text">Email Address</span>
             <br/>
                 <input
                     type="text"
@@ -51,8 +53,9 @@ function SignupFormPage() {
                 />
             </label>
             <br/>
-            <label>Password
-            <br/>
+            <label id="sign-up-password">
+                    <span id="password-text">Password</span>
+                    <br/>
                 <input
                     type="password"
                     value={password}
@@ -61,8 +64,9 @@ function SignupFormPage() {
                 />
             </label>
             <br/>
-            <label>Confirm Password
-            <br/>
+            <label id="confirm-password">
+                    <span id="confirm-password-text">Confirm Password</span>
+                    <br/>
                 <input
                     type="password"
                     value={confirmPassword}

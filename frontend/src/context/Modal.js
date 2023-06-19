@@ -27,7 +27,7 @@ export function Modal({ onClose, children }) {
     if (!modalNode) return null;
 
     return ReactDOM.createPortal(
-        <div id="modal">
+        <div id="login-modal">
             <div id="modal-background" onClick={onClose} />
             <div id="modal-content">
             <div class="login-picture-container">
@@ -41,3 +41,23 @@ export function Modal({ onClose, children }) {
         modalNode
     );
 }
+
+export function SignupModal({ onClose, children }) {
+    const modalNode = useContext(ModalContext);
+    if (!modalNode) return null;
+  
+    return ReactDOM.createPortal(
+      <div id="signup-modal">
+        <div id="modal-background" onClick={onClose} />
+        <div id="modal-content">
+          <div className="signup-picture-container">
+            <span className="signup-img-blurb">
+              Unlock Chew Fork Times recipes and your personal recipe box with a free account.
+            </span>
+          </div>
+          {children}
+        </div>
+      </div>,
+      modalNode
+    );
+  }

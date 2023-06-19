@@ -55,9 +55,26 @@
     padding-right: 10px;
     font-size: 15px;
     color: #222;
-
+    position: relative;
+    display: inline-block;
     letter-spacing: .02em;
     line-height: 16px;
+}
+
+.easy-weeknight-dinners-nav::after {
+    content: "";
+    position: absolute;
+    bottom: -33px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    transform: scaleX(0);
+    transition: none;
+}
+
+.easy-weeknight-dinners-nav:hover::after {
+    transform: scaleX(1);
 }
 
 #subscribe-button {
@@ -82,6 +99,6 @@
     transition: background-color 0.3s ease;
 }
 
-#subscribe-button:hover {
-    background-color: #c92c16;
+#subscribe-button:hover::before {
+    transform: scaleX(1);
 }

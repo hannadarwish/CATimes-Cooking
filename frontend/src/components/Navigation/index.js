@@ -25,10 +25,9 @@ function Navigation() {
     return (
         <ul class="nav">
             <div class="cyt-site-logo-container">
-                <div id="cyt-site-logo"></div>
-            </div>
-            <div>
-
+                <NavLink exact to="/">
+                    <div id="cyt-site-logo"></div>
+                </NavLink>
             </div>
             <li class="nav-buttons">
                 {/* <NavLink exact to="/">Home</NavLink> */}

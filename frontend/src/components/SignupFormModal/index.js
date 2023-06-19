@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { SignupModal } from '../../context/SignupModal';
-import SignupFormPage from './SignupFormPage';
+import { SignupModal } from '../../context/Modal';
+import SignupFormPage from '../SignupFormPage';
 
 function SignupFormModal() {
   const [showModal, setShowModal] = useState(false);
-
   return (
     <>
       <button id="subscribe-home-button" onClick={() => setShowModal(true)}>Subscribe</button>

@@ -52,8 +52,8 @@ function LoginForm() {
 
     return (
         // when form is submitted, the component re-renders, displaying any error messages in the <ul> element using errors.map
-        <div class="form-container">
-            <form class="login-form" onSubmit={handleSubmit}>
+        <div className="form-container">
+            <form className="login-form" onSubmit={handleSubmit}>
                 <ul>
                     {errors.map(error => <li key={error}>{error}</li>)}
                 </ul>

@@ -16,6 +16,8 @@ class User < ApplicationRecord
   dependent: :destroy
 
   has_many :notes,
+  foreign_key: :author_id,
+  class_name: :Note,
   dependent: :destroy
 
   has_many :ratings,

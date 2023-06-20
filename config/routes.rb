@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :users, only: :create
     resource :session, only: [:show, :create, :destroy]
+    resources :recipes, only: [:index, :show]
+    resources :notes, only: [:create, :update, :destroy]
+    resources :ratings, only: [:create, :destroy] 
+    resources :saved_recipes, only: [:index, :create, :destroy]
   end
 
   get '*path', to: "static_pages#frontend_index"

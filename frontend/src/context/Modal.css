@@ -130,8 +130,8 @@
 #profile-modal-content {
     display: table;
     height: 100%;
-    max-height: 590px;
-    width:900px;
+    height: 100%;
+    width: 100%;
     position: absolute;
     background-color:white;
     display: flex;

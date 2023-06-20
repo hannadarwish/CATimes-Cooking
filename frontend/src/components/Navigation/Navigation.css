@@ -39,7 +39,6 @@
 #cyt-site-logo {
     margin-top: 35px;
     background: url(https://static01.nyt.com/applications/cooking/a5ef9cf/assets/SiteLogoRed.svg) no-repeat center center;
-    background-position: 0 0.19px;
     box-sizing: border-box;
     display: block;
     height: 31px;
@@ -114,6 +113,51 @@
 
 #profile-button:hover svg {
     fill: #e33d26;
+}
+
+#profile-modal-logout-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#user-email {
+    margin: 0px;
+    color: rgb(18, 18, 18);
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+#good-afternoon-text {
+    margin: 0px;
+    color: rgb(18, 18, 18);
+    font-family: nyt-cheltenham, georgia, "times new roman", times, serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+#your-subscription {
+    margin: 0px;
+    color: rgb(18, 18, 18);
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+#all-access {
+    margin: 0px;
+    color: rgb(18, 18, 18);
+    font-family: nyt-cheltenham, georgia, "times new roman", times, serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
 }
 
 #recipe-box-button {

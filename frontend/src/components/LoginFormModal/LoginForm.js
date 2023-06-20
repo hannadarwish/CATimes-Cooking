@@ -50,6 +50,16 @@ function LoginForm() {
             });
     }
 
+    const handleLoginDemo = (e) => {
+        e.preventDefault();
+
+        const demoEmail = 'demo@user.io';
+        const demoPassword = 'password';
+        
+        setEmail(demoEmail);
+        setPassword(demoPassword);
+    }
+
     return (
         // when form is submitted, the component re-renders, displaying any error messages in the <ul> element using errors.map
         <div className="form-container">
@@ -81,6 +91,7 @@ function LoginForm() {
                 </label>
                 <br/>
                 <button id="login-modal-button" type="submit">Log In</button>
+                <button onClick={handleLoginDemo} id="login-demo-button" type="submit">Demo User</button>
             </form>
         </div>
     );

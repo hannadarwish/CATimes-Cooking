@@ -12,6 +12,18 @@
 class User < ApplicationRecord
   has_secure_password # handles password attr reader and setting as well as is_password (authenticate)
 
+  has_many :saved_recipes,
+  dependent: :destroy
+
+  has_many :notes,
+  dependent: :destroy
+
+  has_many :ratings,
+  dependent: :destroy
+
+  has_many :recipes,
+  through: :saved_recipes
+
   validates :email, 
     uniqueness: true, 
     length: { in: 3..255 }, 

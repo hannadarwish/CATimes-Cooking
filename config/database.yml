@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: cft_cooking_production
-  username: cft_cooking
-  password: <%= ENV["CFT_COOKING_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>

@@ -92,6 +92,7 @@ function LoginForm() {
                 <br/>
                 <button id="login-modal-button" type="submit">Log In</button>
                 <button onClick={handleLoginDemo} id="login-demo-button" type="submit">Demo User</button>
+                <br/>
             </form>
         </div>
     );

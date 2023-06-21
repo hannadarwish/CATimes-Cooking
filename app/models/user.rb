@@ -24,7 +24,8 @@ class User < ApplicationRecord
   dependent: :destroy
 
   has_many :recipes,
-  through: :saved_recipes
+  through: :saved_recipes,
+  source: :recipe
 
   validates :email, 
     uniqueness: true, 

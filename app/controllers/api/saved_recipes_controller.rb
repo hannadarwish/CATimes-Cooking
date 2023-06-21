@@ -1,10 +1,10 @@
 class Api::SavedRecipesController < ApplicationController
 
-    def index 
-        # get saved recipes associated with current user
-        @saved_recipes = current_user.saved_recipes 
-        render json: @saved_recipes
-    end
+    # def index 
+    #     # get saved recipes associated with current user
+    #     @saved_recipes = current_user.saved_recipes 
+    #     render json: @saved_recipes
+    # end
 
     def create
         @saved_recipe = SavedRecipe.new(saved_recipe_params)

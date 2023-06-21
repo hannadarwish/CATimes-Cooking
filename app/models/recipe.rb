@@ -26,6 +26,8 @@ class Recipe < ApplicationRecord
     has_many :ratings,
     dependent: :destroy
 
+    has_one_attached :photo
+
     CATEGORIES = ["Breakfast", "Brunch", "Lunch", "Dinner", "Sides", "Dessert"]
 
     validates :cooking_time, :description, :ingredients, :preparation, :category, presence: true

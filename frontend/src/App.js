@@ -4,12 +4,16 @@ import SignupFormPage from "./components/SignupFormPage";
 import Navigation from "./components/Navigation";
 import RecipeBox from "./components/RecipeBox";
 import EasyWeeknightDinners from "./components/EasyWeeknightDinners";
+import RecipeOfTheDay from "./components/RecipeOfTheDay";
 
 function App() {
   return (
     <>
       <Navigation />
         <Switch>
+        <Route exact path="/">
+          <RecipeOfTheDay />
+        </Route>
           <Route path="/recipebox">
             <RecipeBox />
           </Route>

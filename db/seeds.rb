@@ -36,12 +36,14 @@ ApplicationRecord.transaction do
     puts "Creating recipes..."
 
     Recipe.create!(
+      id: 1,
       name: 'Spaghetti Carbonara',
       cooking_time: '30 minutes',
       description: 'Classic Italian pasta dish made with eggs, cheese, pancetta, and black pepper.',
       ingredients: 'Spaghetti, eggs, Pecorino Romano cheese, pancetta, black pepper, salt',
       preparation: 'Cook spaghetti until al dente. In a separate bowl, whisk eggs, cheese, and black pepper. In a pan, cook pancetta until crispy. Drain spaghetti and mix with the egg mixture. Add pancetta and toss until coated. Serve with additional cheese and black pepper.',
-      category: 'Lunch'
+      category: 'Lunch',
+      photo_url: "https://static01.nyt.com/images/2022/07/15/dining/MC-Classic-Pasta-Salad-15SALADREX/MC-Classic-Pasta-Salad-15SALADREX-threeByTwoMediumAt2X.jpg"
     )
 
     puts "Done!"

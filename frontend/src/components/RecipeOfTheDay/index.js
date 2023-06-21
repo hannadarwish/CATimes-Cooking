@@ -1,21 +1,10 @@
 import './RecipeOfTheDay.css'
-import { useEffect, useState } from 'react';
 
 function RecipeOfTheDay() {
-    const [recipe, setRecipe] = useState([]);
-
-    useEffect(() => {
-        const fetchRecipe = async () => {
-        const res = await fetch("/api/recipes");
-        setRecipe (await res.json());
-        }
-        fetchRecipe();
-    }, []);
-    
 
     return (
         <div className="recipe-of-the-day-container">
-            <img src={recipe.photoUrl} alt="recipe of the day" />
+            <img id="recipe-of-the-day-image" src="https://static01.nyt.com/images/2022/07/15/dining/MC-Classic-Pasta-Salad-15SALADREX/MC-Classic-Pasta-Salad-15SALADREX-threeByTwoMediumAt2X.jpg" />
         </div>
     )
 }

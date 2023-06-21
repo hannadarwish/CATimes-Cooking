@@ -26,8 +26,11 @@ class Recipe < ApplicationRecord
     has_many :ratings,
     dependent: :destroy
 
+    CATEGORIES = ["Breakfast", "Brunch", "Lunch", "Dinner", "Sides", "Dessert"]
+
     validates :cooking_time, :description, :ingredients, :preparation, :difficulty, :category, presence: true
     validates :name, presence: true, uniqueness: true
+    validates :category, inclusion: { in: CATEGORIES, message: "'%{value}' must be one of the following: Breakfast, Brunch, Lunch, Dinner, Sides, Dessert" }
 
 
 

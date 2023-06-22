@@ -5,6 +5,7 @@ import Navigation from "./components/Navigation";
 import RecipeBox from "./components/RecipeBox";
 import EasyWeeknightDinners from "./components/EasyWeeknightDinners";
 import RecipeOfTheDay from "./components/RecipeOfTheDay";
+import RecipeIndex from "./components/RecipeIndex";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Switch>
         <Route exact path="/">
           <RecipeOfTheDay />
+          <RecipeIndex />
         </Route>
           <Route path="/recipebox">
             <RecipeBox />

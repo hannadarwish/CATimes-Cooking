@@ -50,6 +50,7 @@ export const fetchRecipe = (recipeId) => async (dispatch) => {
 
 export default function recipesReducer(state = {}, action) {
     let newState;
+
     switch (action.type) {
         case RECEIVE_RECIPES:
             return action.recipes;

@@ -19,15 +19,26 @@ export default function RecipeIndex() {
         dispatch(fetchRecipes())
     }, [])
 
+    const lovelyLayerCakes = recipes.filter(recipe => recipe.orgCategory === "Lovely Layer Cakes");
+    const trendingRecipes = recipes.filter(recipe => recipe.orgCategory === "Trending Recipes");
+
+    debugger
+    
     return (
-        <div>
-            <LovelyLayerCakes/>
-            <section className="trending-recipes-carousel">
-                <RecipeCarousel recipes={recipes}/>
-            </section>
-            <section className="more-from-our-editors">
-                <MoreFromOurEditors />
-            </section>
-        </div>
+        <>
+            { recipes.length === 0 ? <h1>loading...</h1> : 
+            <div>
+                <section className="lovely-layer-cakes-carousel">
+                    <RecipeCarousel recipes={lovelyLayerCakes} />
+                </section>
+                <section className="trending-recipes-carousel">
+                    <RecipeCarousel recipes={trendingRecipes} />
+                </section>
+                <section className="more-from-our-editors">
+                    <MoreFromOurEditors />
+                </section>
+            </div> }
+        </>
+
     )
 }

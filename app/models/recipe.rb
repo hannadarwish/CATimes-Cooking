@@ -30,7 +30,7 @@ class Recipe < ApplicationRecord
 
     MEAL_CATEGORIES = ["Breakfast", "Brunch", "Lunch", "Dinner", "Sides", "Dessert"]
 
-    validates :cooking_time, :description, :ingredients, :preparation, :meal_category, presence: true
+    validates :cooking_time, :description, :ingredients, :preparation, :meal_category, :image_url, presence: true
     validates :name, presence: true, uniqueness: true
     validates :meal_category, inclusion: { in: MEAL_CATEGORIES, message: "'%{value}' must be one of the following: Breakfast, Brunch, Lunch, Dinner, Sides, Dessert" }
 

@@ -36,11 +36,10 @@ ApplicationRecord.transaction do
     puts "Creating recipes..."
 
     Recipe.create!(
-      id: 1,
       name: 'Strawberry and Cream Layer Cake',
       cooking_time: '2 hours',
       description: 'This delicate cake is inspired by fraisier, a French cake made from layers of sponge, strawberries and cream. Fraisier cakes are elaborately constructed and typically combine several components to make the cream filling, but this strawberry cake is lighter, looser and much more casual. To avoid squishing the cake when slicing, use a serrated knife in long, even strokes to cut clean slices.',
-      ingredients: '1½pounds fresh strawberries, hulled, ½cup/100 grams granulated sugar, 1cup/240 grams heavy cream, chilled, 1cup/240 grams crème fraîche, mascarpone or sour cream, chilled, pinch of kosher salt, 1 Sponge Cake recipe, baked in a 9-inch springform pan and cooled',
+      ingredients: '1½ pounds fresh strawberries, hulled, ½ cup/100 grams granulated sugar, 1cup/240 grams heavy cream, chilled, 1cup/240 grams crème fraîche, mascarpone or sour cream, chilled, pinch of kosher salt, 1 Sponge Cake recipe, baked in a 9-inch springform pan and cooled',
       preparation: 'Step 1
       Fill a small saucepan with about 1 inch of water and set over medium heat until the water steams.
       
@@ -60,18 +59,8 @@ ApplicationRecord.transaction do
       Slice the cake with a serrated knife and serve. Drizzle the slices with any remaining strawberry syrup. The cake is best served the day it’s made, but will keep, covered and chilled, for up to 3 days.',
       meal_category: 'Dessert',
       org_category: "Lovely Layer Cakes",
-      photo_url: "https://static01.nyt.com/images/2022/07/15/dining/MC-Classic-Pasta-Salad-15SALADREX/MC-Classic-Pasta-Salad-15SALADREX-threeByTwoMediumAt2X.jpg"
-    )
-
-    Recipe.create!(
-      id: 1,
-      name: 'Spaghetti Carbonara',
-      cooking_time: '30 minutes',
-      description: 'Classic Italian pasta dish made with eggs, cheese, pancetta, and black pepper.',
-      ingredients: 'Spaghetti, eggs, Pecorino Romano cheese, pancetta, black pepper, salt',
-      preparation: 'Cook spaghetti until al dente. In a separate bowl, whisk eggs, cheese, and black pepper. In a pan, cook pancetta until crispy. Drain spaghetti and mix with the egg mixture. Add pancetta and toss until coated. Serve with additional cheese and black pepper.',
-      category: 'Lunch',
-      photo_url: "https://static01.nyt.com/images/2022/07/15/dining/MC-Classic-Pasta-Salad-15SALADREX/MC-Classic-Pasta-Salad-15SALADREX-threeByTwoMediumAt2X.jpg"
+      author: "Claire Saffitz",
+      image_url: "https://static01.nyt.com/images/2021/05/27/dining/cs-strawberry-and-cream-layer-cake/merlin_188069463_60925639-dedc-4df7-959b-659a86fce390-articleLarge.jpg?w=1280&q=75"
     )
 
     puts "Done!"

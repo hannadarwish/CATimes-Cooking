@@ -19,6 +19,10 @@ export default function RecipeCarousel({recipes}) {
         setCurrentSlide(newSlide);
     };
 
+    if (recipes.length === 0) {
+        return null;
+    }
+    
     return (
         <div>
             <CarouselProvider
@@ -31,9 +35,11 @@ export default function RecipeCarousel({recipes}) {
                 className="carousel-container"
             >
             <Slider>
-                <Slide index={0}>Slide 1
-                    <div>
-                        Recipe Card Info
+                <Slide index={0}>
+                    <div className="slide-container">
+                        <img id="slide-img" src={recipes[0].imageUrl}></img>
+                        <h3 id="recipe-name">{recipes[0].name}</h3>
+                        <p id="author-name">{recipes[0].author}</p>
                     </div>
                 </Slide>
                 <Slide index={1}>Slide 2

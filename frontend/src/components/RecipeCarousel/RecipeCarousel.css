@@ -1,0 +1,21 @@
+.carousel-container {
+    position: relative;
+}
+
+.carousel-container .carousel__slider {
+    margin: 0;
+}
+
+.carousel-container .carousel__back-button {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-container .carousel__next-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}

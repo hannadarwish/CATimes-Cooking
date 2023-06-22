@@ -1,4 +1,5 @@
-import './RecipeOfTheDay.css'
+import './RecipeOfTheDay.css';
+import { GrBookmark } from 'react-icons/gr';
 
 function RecipeOfTheDay() {
 
@@ -21,6 +22,12 @@ function RecipeOfTheDay() {
                     </div>
                     Melissa Clark
                 </div>
+            </div>
+            <div className="rotd-buttons">
+                <button id="save-to-recipe-box-button">
+                    <div id="bookmark">{<GrBookmark color="white" />}</div>
+                    <span id="save-to-recipe-box-text"> Save to Recipe Box</span>
+                </button>
             </div>
         </div>
     )

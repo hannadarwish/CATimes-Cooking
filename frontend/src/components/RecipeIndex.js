@@ -6,7 +6,7 @@
 
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import RecipeCarousel from "./RecipeCarousel";
+import RecipeCarousel from "./RecipeCarousel/RecipeCarousel";
 import MoreFromOurEditors from "./MoreFromOurEditors";
 import { fetchRecipes, getRecipes } from "../store/recipes";
 
@@ -20,9 +20,15 @@ export default function RecipeIndex() {
 
     return (
         <div>
-            <RecipeCarousel recipes={recipes}/>
-            <RecipeCarousel recipes={recipes}/>
-            <MoreFromOurEditors />
+            <section className="lovely-layer-cakes-carousel">
+                <RecipeCarousel recipes={recipes}/>
+            </section>
+            <section className="trending-recipes-carousel">
+                <RecipeCarousel recipes={recipes}/>
+            </section>
+            <section className="more-from-our-editors">
+                <MoreFromOurEditors />
+            </section>
         </div>
     )
 }

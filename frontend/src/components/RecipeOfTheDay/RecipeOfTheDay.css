@@ -110,6 +110,44 @@
     object-fit: cover;
 }
 
+#bookmark svg {
+    color: white;
+    font-size: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#save-to-recipe-box-text {
+    letter-spacing: .3px;
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+#save-to-recipe-box-button {
+    position: absolute;
+    left:50px;
+    bottom:20px;
+    background-color: rgba(0,0,0,.8);
+    border: 1px solid #363835;
+    color: #fff;
+    height: 35px;
+    width: 170px;
+    border-radius: 3px;
+    letter-spacing: .3px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#save-to-recipe-box-button:hover {
+    background-color: #e33d26;
+    border-color: #e33d26;
+}
+
 
 
 

@@ -16,7 +16,7 @@ export default function LovelyLayerCakes() {
     if (recipes.length === 0) {
         return null
     }
-    
+
     return (
         <section className="lovely-layer-cakes-carousel">
             <RecipeCarousel recipes={recipes} />

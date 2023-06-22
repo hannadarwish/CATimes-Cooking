@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import RecipeCarousel from "./RecipeCarousel/RecipeCarousel";
 import MoreFromOurEditors from "./MoreFromOurEditors";
 import { fetchRecipes, getRecipes } from "../store/recipes";
+import LovelyLayerCakes from "./LovelyLayerCakes";
 
 export default function RecipeIndex() {
     const recipes = useSelector(getRecipes);
@@ -20,9 +21,7 @@ export default function RecipeIndex() {
 
     return (
         <div>
-            <section className="lovely-layer-cakes-carousel">
-                <RecipeCarousel recipes={recipes}/>
-            </section>
+            <LovelyLayerCakes/>
             <section className="trending-recipes-carousel">
                 <RecipeCarousel recipes={recipes}/>
             </section>

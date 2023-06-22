@@ -8,10 +8,10 @@
 #  description  :text             not null
 #  ingredients  :text             not null
 #  preparation  :text             not null
-#  difficulty   :string           not null
 #  category     :string           not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  org_category :string
 #
 class Recipe < ApplicationRecord
     has_many :notes,
@@ -28,12 +28,10 @@ class Recipe < ApplicationRecord
 
     has_one_attached :photo
 
-    CATEGORIES = ["Breakfast", "Brunch", "Lunch", "Dinner", "Sides", "Dessert"]
+    MEAL_CATEGORIES = ["Breakfast", "Brunch", "Lunch", "Dinner", "Sides", "Dessert"]
 
-    validates :cooking_time, :description, :ingredients, :preparation, :category, presence: true
+    validates :cooking_time, :description, :ingredients, :preparation, :meal_category, presence: true
     validates :name, presence: true, uniqueness: true
-    validates :category, inclusion: { in: CATEGORIES, message: "'%{value}' must be one of the following: Breakfast, Brunch, Lunch, Dinner, Sides, Dessert" }
-
-
+    validates :meal_category, inclusion: { in: MEAL_CATEGORIES, message: "'%{value}' must be one of the following: Breakfast, Brunch, Lunch, Dinner, Sides, Dessert" }
 
 end

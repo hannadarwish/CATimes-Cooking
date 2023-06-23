@@ -42,7 +42,9 @@ export const fetchRecipe = (recipeId) => async (dispatch) => {
 
     if (response.ok) {
         const recipe = await response.json();
-        dispatch(receiveRecipe(recipe));
+        dispatch(receiveRecipe(recipe.recipe));
+    } else {
+        console.log('Recipe not found');
     }
 }
 

@@ -11,7 +11,7 @@ class Api::RecipesController < ApplicationController
         if @recipe 
             render :show 
         else
-            render json: "Recipe not found", status: :not_found
+            render json: { error: "Recipe not found" }, status: :not_found
         end
     end
 

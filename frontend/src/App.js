@@ -6,6 +6,7 @@ import RecipeBox from "./components/RecipeBox";
 import EasyWeeknightDinners from "./components/EasyWeeknightDinners";
 import RecipeOfTheDay from "./components/RecipeOfTheDay";
 import RecipeIndex from "./components/RecipeIndex";
+import RecipeShow from "./components/RecipeShow";
 
 function App() {
   return (
@@ -19,9 +20,9 @@ function App() {
           <Route path="/recipebox">
             <RecipeBox />
           </Route>
-          {/* <Route path="/recipe">
+          <Route exact path="/recipes/:recipeId">
             <RecipeShow />
-          </Route> */}
+          </Route>
           <Route path="/easyweeknightdinners">
             <EasyWeeknightDinners />
           </Route>

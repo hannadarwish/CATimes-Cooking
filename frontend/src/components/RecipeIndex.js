@@ -22,8 +22,6 @@ export default function RecipeIndex() {
     const lovelyLayerCakes = recipes.filter(recipe => recipe.orgCategory === "Lovely Layer Cakes");
     const trendingRecipes = recipes.filter(recipe => recipe.orgCategory === "Trending Recipes");
 
-    // debugger
-
     return (
         <div className="recipe-index-container">
             { recipes.length === 0 ? <h1>loading...</h1> : 

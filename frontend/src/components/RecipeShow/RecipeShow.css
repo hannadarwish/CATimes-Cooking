@@ -1,5 +1,106 @@
+.recipe-show-container {
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: white;
+    color: #222
+}
 
-.show-component {
-    background-color: green;
-    height: 600px;
+.recipe-header-container {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+}
+
+#recipe-name-box {
+    min-width: 300px;
+    padding-right: 50px;
+}
+
+#recipe-name-show {
+    font-family: nyt-cheltenham,Georgia,"Times New Roman",serif;
+    font-weight: lighter;
+    font-size: 34px;
+    letter-spacing: .4px;
+    line-height: 1.2;
+}
+
+#recipe-author-show {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 25px;
+}
+
+#author-underline {
+    text-decoration: underline;
+}
+
+img {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.details-description-container {
+    display: flex;
+    justify-content: space-between;
+    font-family: nyt-cheltenham,Georgia,"Times New Roman",serif;
+    font-weight: 100px;
+    letter-spacing: .01em;
+    line-height: 1.45;
+    color:#222;
+    margin-top: 20px;
+}
+
+#time-rating-notes {
+    min-width: 300px;
+    padding-right: 50px;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: .01em;
+    line-height: 1.45;
+}
+
+.ingredients-preparation-container{
+    display: flex;
+    margin-top: 20px;
+    letter-spacing: .01em;
+    line-height: 1.45;
+}
+
+#ingredients {
+    min-width: 300px;
+    padding-right: 50px;
+}
+
+.ratings-notes-container {
+    display: flex;
+    margin-top: 20px;
+    letter-spacing: .01em;
+    line-height: 1.45;
+}
+
+#ratings-section {
+    min-width: 300px;
+    padding-right: 50px;
+}
+
+.newsletter-section-container {
+    display: flex;
+    margin-top: 20px;
+    letter-spacing: .01em;
+    line-height: 1.45;
+}
+
+.about-us-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    letter-spacing: .01em;
+    line-height: 1.45;
+}
+
+#about-us-text {
+    padding-right: 50px;
 }

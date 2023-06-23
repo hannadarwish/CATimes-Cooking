@@ -20,8 +20,6 @@ export default function RecipeCarousel({recipes}) {
         setCurrentSlide(newSlide);
     };
 
-    console.log(recipes)
-
     return (
         <div className="carousel-container">
 

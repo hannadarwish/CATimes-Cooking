@@ -24,57 +24,68 @@ export default function RecipeCarousel({recipes}) {
     }
 
     return (
-        <div>
+        <div className="carousel-container">
             <CarouselProvider
                 naturalSlideWidth={120}
-                naturalSlideHeight={100}
+                naturalSlideHeight={140}
                 totalSlides={6}
-                visibleSlides={3}
+                visibleSlides={4}
                 dragEnabled = {false}
                 currentSlide={currentSlide}
-                className="carousel-container"
             >
-            <Slider>
-                <Slide index={0}>
+            <Slider className="slides-outer-container">
+                <Slide className="slide" index={0}>
                     <div className="slide-container">
                         <img id="slide-img" src={recipes[0].imageUrl}></img>
-                        <h3 id="recipe-name">{recipes[0].name}</h3>
-                        <p id="author-name">{recipes[0].author}</p>
+                        <div className="slide-content">
+                            <h3 id="recipe-name">{recipes[0].name}</h3>
+                            <p id="author-name">{recipes[0].author}</p>
+                        </div>
                     </div>
                 </Slide>
-                <Slide index={1}>
+                <Slide className="slide" index={1}>
                     <div className="slide-container">
                         <img id="slide-img" src={recipes[1].imageUrl}></img>
-                        <h3 id="recipe-name">{recipes[1].name}</h3>
-                        <p id="author-name">{recipes[1].author}</p>
+                        <div className="slide-content">
+                            <h3 id="recipe-name">{recipes[1].name}</h3>
+                            <p id="author-name">{recipes[1].author}</p>
+                        </div>
                     </div>
                 </Slide>
-                <Slide index={2}>
+                <Slide className="slide" index={2}>
                     <div className="slide-container">
                         <img id="slide-img" src={recipes[2].imageUrl}></img>
-                        <h3 id="recipe-name">{recipes[2].name}</h3>
-                        <p id="author-name">{recipes[2].author}</p>
+                        <div className="slide-content">
+                            <h3 id="recipe-name">{recipes[2].name}</h3>
+                            <p id="author-name">{recipes[2].author}</p>
+                        </div>
                     </div>
                 </Slide>
-                <Slide index={3}>
+                <Slide className="slide" index={3}>
                     <div className="slide-container">
                         <img id="slide-img" src={recipes[3].imageUrl}></img>
-                        <h3 id="recipe-name">{recipes[3].name}</h3>
-                        <p id="author-name">{recipes[3].author}</p>
+                        <div className="slide-content">
+                            <h3 id="recipe-name">{recipes[3].name}</h3>
+                            <p id="author-name">{recipes[3].author}</p>
+                        </div>
                     </div>
                 </Slide>
-                <Slide index={4}>
+                <Slide className="slide" index={4}>
                     <div className="slide-container">
                         <img id="slide-img" src={recipes[4].imageUrl}></img>
-                        <h3 id="recipe-name">{recipes[4].name}</h3>
-                        <p id="author-name">{recipes[4].author}</p>
+                        <div className="slide-content">
+                            <h3 id="recipe-name">{recipes[4].name}</h3>
+                            <p id="author-name">{recipes[4].author}</p>
+                        </div>
                     </div>
                 </Slide>
-                <Slide index={5}>
+                <Slide className="slide" index={5}>
                     <div className="slide-container">
                         <img id="slide-img" src={recipes[5].imageUrl}></img>
-                        <h3 id="recipe-name">{recipes[5].name}</h3>
-                        <p id="author-name">{recipes[5].author}</p>
+                        <div className="slide-content">
+                            <h3 id="recipe-name">{recipes[5].name}</h3>
+                            <p id="author-name">{recipes[5].author}</p>
+                        </div>
                     </div>
                 </Slide>
             </Slider>

@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import RecipeCarousel from "./RecipeCarousel/RecipeCarousel";
 import MoreFromOurEditors from "./MoreFromOurEditors";
 import { fetchRecipes, getRecipes } from "../store/recipes";
-import LovelyLayerCakes from "./LovelyLayerCakes";
+import './RecipeIndex.css'
 
 export default function RecipeIndex() {
     const recipes = useSelector(getRecipes);
@@ -23,20 +23,23 @@ export default function RecipeIndex() {
     const trendingRecipes = recipes.filter(recipe => recipe.orgCategory === "Trending Recipes");
 
     return (
-        <>
+        <div className="recipe-index-container">
             { recipes.length === 0 ? <h1>loading...</h1> : 
             <div>
                 <section className="lovely-layer-cakes-carousel">
+                    <h2>Lovely Layer Cakes</h2>
                     <RecipeCarousel recipes={lovelyLayerCakes} />
                 </section>
                 <section className="trending-recipes-carousel">
+                    <h2>Trending Recipes</h2>
                     <RecipeCarousel recipes={trendingRecipes} />
                 </section>
                 <section className="more-from-our-editors">
+                    <h2>More From Our Editors</h2>
                     <MoreFromOurEditors />
                 </section>
             </div> }
-        </>
+        </div>
 
     )
 }

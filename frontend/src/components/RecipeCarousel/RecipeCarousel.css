@@ -2,10 +2,6 @@
     position: relative;
 }
 
-.carousel-container .carousel__slider {
-    margin: 0;
-}
-
 .carousel-container .carousel__back-button {
     position: absolute;
     left: 10px;
@@ -19,3 +15,36 @@
     top: 50%;
     transform: translateY(-50%);
 }
+
+.slides-outer-container {
+    width: 1000px;
+}
+
+.slide {
+    border: 1px solid grey;
+}
+
+#slide-img {
+    height: 157px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.slide-content {
+    margin-top: 10px;
+    background-color: blue;
+}
+
+#recipe-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#author-name {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #888;
+}
+
+
+

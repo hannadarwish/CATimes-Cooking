@@ -22,6 +22,8 @@ export default function RecipeIndex() {
     const lovelyLayerCakes = recipes.filter(recipe => recipe.orgCategory === "Lovely Layer Cakes");
     const trendingRecipes = recipes.filter(recipe => recipe.orgCategory === "Trending Recipes");
 
+    // debugger
+
     return (
         <div className="recipe-index-container">
             { recipes.length === 0 ? <h1>loading...</h1> : 
@@ -32,7 +34,8 @@ export default function RecipeIndex() {
                     <RecipeCarousel recipes={lovelyLayerCakes} />
                 </section>
                 <section className="trending-recipes-carousel">
-                    <h2>Trending Recipes</h2>
+                    <h2 id="trending-recipes-title">Trending Recipes</h2>
+                    <h3 id="trending-recipes-tagline">Here’s what’s popular on Cooking right now.</h3>
                     <RecipeCarousel recipes={trendingRecipes} />
                 </section>
                 <section className="more-from-our-editors">

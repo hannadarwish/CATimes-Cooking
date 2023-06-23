@@ -5,11 +5,11 @@
 }
 
 .lovely-layer-cakes-carousel {
-    border-top: 7px solid #222;
+    border-top: 6px solid #222;
     margin-top: 50px;
 }
 
-#lovely-layer-cakes-title {
+#lovely-layer-cakes-title, #trending-recipes-title {
     font-family: nyt-cheltenham,Georgia,"Times New Roman",serif;
     font-weight:lighter;
     font-size: 28px;
@@ -20,7 +20,7 @@
     line-height: 1.2;
 }
 
-#lovely-layer-cakes-tagline {
+#lovely-layer-cakes-tagline, #trending-recipes-tagline {
     color: #999;
     font-weight: lighter;
     font-size: 28px;

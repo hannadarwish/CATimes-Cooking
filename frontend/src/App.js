@@ -12,13 +12,16 @@ function App() {
     <>
       <Navigation />
         <Switch>
-        <Route exact path="/">
-          <RecipeOfTheDay />
-          <RecipeIndex />
-        </Route>
+          <Route exact path="/">
+            <RecipeOfTheDay />
+            <RecipeIndex />
+          </Route>
           <Route path="/recipebox">
             <RecipeBox />
           </Route>
+          {/* <Route path="/recipe">
+            <RecipeShow />
+          </Route> */}
           <Route path="/easyweeknightdinners">
             <EasyWeeknightDinners />
           </Route>

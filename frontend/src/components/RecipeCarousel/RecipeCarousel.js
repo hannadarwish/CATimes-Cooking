@@ -20,12 +20,13 @@ export default function RecipeCarousel({recipes}) {
         setCurrentSlide(newSlide);
     };
 
-    if (recipes.length === 0) {
-        return null;
-    }
+    console.log(recipes)
 
     return (
         <div className="carousel-container">
+
+            {recipes.length === 0 ? null : 
+            
             <CarouselProvider
                 naturalSlideWidth={120}
                 naturalSlideHeight={130}
@@ -119,6 +120,7 @@ export default function RecipeCarousel({recipes}) {
                 </ButtonNext>
             )}
             </CarouselProvider>
+            }
         </div>
     );
 }

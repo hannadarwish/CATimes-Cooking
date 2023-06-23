@@ -457,6 +457,212 @@ ApplicationRecord.transaction do
       image_url: "https://static01.nyt.com/images/2021/05/07/dining/vl-hummingbird-cake/vl-hummingbird-cake-articleLarge.jpg?w=1280&q=75"
     )
 
+    Recipe.create!(
+      name: "Oven-Roasted Chicken Shawarma",
+      cooking_time: "45 minutes",
+      description: "Here is a recipe for an oven-roasted version of the classic street-side flavor bomb usually cooked on a rotisserie. It is perfect for an evening with family and friends. Serve with pita and tahini, chopped cucumbers and tomatoes, some olives, chopped parsley, some feta, fried eggplant, hummus swirled with harissa, rice or rice pilaf. You can make the white sauce that traditionally accompanies it by cutting plain yogurt with mayonnaise and lemon juice, and flecking it with garlic. For a red to offset it, simmer ketchup with red pepper flakes and a hit of red-wine vinegar until it goes syrupy and thick, or just use your favorite hot sauce instead.",
+      ingredients: "Yield:
+      4 to 6 servings
+      2lemons, juiced
+      ½cup plus 1 tablespoon olive oil
+      6cloves garlic, peeled, smashed and minced
+      1teaspoon kosher salt
+      2teaspoons freshly ground black pepper
+      2teaspoons ground cumin
+      2teaspoons paprika
+      ½teaspoon turmeric
+      A pinch ground cinnamon
+      Red pepper flakes, to taste
+      2pounds boneless, skinless chicken thighs
+      1large red onion, peeled and quartered
+      2tablespoons chopped fresh parsley",
+      preparation: "Step 1
+      Prepare a marinade for the chicken. Combine the lemon juice, ½ cup olive oil, garlic, salt, pepper, cumin, paprika, turmeric, cinnamon and red pepper flakes in a large bowl, then whisk to combine. Add the chicken and toss well to coat. Cover and store in refrigerator for at least 1 hour and up to 12 hours.
+      
+      Step 2
+      When ready to cook, heat oven to 425 degrees. Use the remaining tablespoon of olive oil to grease a rimmed sheet pan. Add the quartered onion to the chicken and marinade, and toss once to combine. Remove the chicken and onion from the marinade, and place on the pan, spreading everything evenly across it.
+      
+      Step 3
+      Put the chicken in the oven and roast until it is browned, crisp at the edges and cooked through, about 30 to 40 minutes. Remove from the oven, allow to rest 2 minutes, then slice into bits. (To make the chicken even more crisp, set a large pan over high heat, add a tablespoon of olive oil to the pan, then the sliced chicken, and sauté until everything curls tight in the heat.) Scatter the parsley over the top and serve with tomatoes, cucumbers, pita, white sauce, hot sauce, olives, fried eggplant, feta, rice — really anything you desire.",
+      meal_category: "Lunch",
+      org_category: "Trending Recipes",
+      author: "Sam Sifton",
+      image_url: "https://static01.nyt.com/images/2023/03/19/multimedia/SS-Oven-Roasted-Chicken-Shawarma-phmt/SS-Oven-Roasted-Chicken-Shawarma-phmt-master768.jpg?w=1280&q=75"
+    )
+
+    Recipe.create!(
+      name: "Silken Tofu With Spicy Soy Dressing",
+      cooking_time: "5 minutes",
+      description: "This recipe is inspired by the many cold silken tofu dishes from East Asia, like Japanese hiyayakko and Chinese liangban tofu. This no-cook dish is a handy one to have up your sleeve, especially for warm evenings when the desire to cook is nonexistent. Silky soft tofu is draped in a punchy soy dressing, creating a lively dish with little effort. The tofu is ideally served cold, but 10 minutes at room temperature can take the edge off. Make it your own with other fresh herbs such as Thai basil, mint or shiso leaves, or add crunch with fried shallots or roasted peanuts. A salty, fermented element like kimchi, pickled radish or ja choi, also known as zha cai, a Sichuan pickled mustard root, would work well, too. One block of silken tofu is usually enough to feed two people, but for a more substantial meal, serve it with hot rice or noodles to create a pleasing contrast of temperatures.",
+      ingredients: "Yield:
+      4 servings
+      FOR THE SPICY SOY DRESSING
+      ¼cup soy sauce
+      1tablespoon rice vinegar
+      1tablespoon sesame oil
+      1tablespoon chile oil
+      2teaspoons granulated sugar
+      1tablespoon toasted white sesame seeds
+      1scallion, green and white parts, finely sliced
+      FOR THE TOFU
+      2(14-ounce) blocks silken tofu, cold
+      1scallion, green and white parts, thinly sliced
+      Handful of cilantro leaves",
+      preparation: "Step 1
+      Make the dressing: Combine the soy sauce, rice vinegar, sesame oil, chile oil, sugar, sesame seeds and scallion in a small bowl. Whisk until the sugar has dissolved.
+      
+      Step 2
+      Carefully drain the liquid from the package of tofu, and gently tip the block onto a kitchen towel. (Try to keep the block in one piece, if possible, but don’t worry if it falls apart; it will still taste great.) Pat with another clean kitchen towel, removing as much liquid as possible. Transfer the blocks to one large plate or two smaller plates, and spoon the soy dressing over the top until the tofu is completely covered. Top with scallions and cilantro leaves, and eat on its own or with rice or noodles on the side.",
+      meal_category: "Sides",
+      org_category: "Trending Recipes",
+      author: "Hetty McKinnon",
+      image_url: "https://static01.nyt.com/images/2021/09/15/dining/HM-Silken-Tofu-With-Spicy-Soy-Dressing/merlin_193269246_21f040e4-19a1-46d5-b644-b4c727c95d37-master768.jpg?w=1280&q=75"
+    )
+
+    Recipe.create!(
+      name: "Niku Udon (Japanese Beef Noodle Soup)",
+      cooking_time: "30 minutes",
+      description: "Whether served on top of a bowl of rice or with chewy udon noodles, thinly shaved beef cooked with onions in a sweet-savory dashi broth is classic, warming Japanese comfort food that can be made in minutes once your pantry is stocked with a few simple Japanese staples.",
+      ingredients: "Yield:
+      4 servings
+      FOR THE DASHI (SEE TIPS)
+      20grams/about 2 (4-inch) squares kombu
+      20grams/about 2 cups loosely packed katsuobushi (dried bonito flakes)
+      FOR THE BEEF
+      1pound thinly shaved beef (see Tips)
+      1small yellow onion, thinly sliced
+      1bunch scallions, white parts cut into 2-inch segments and halved lengthwise, light green parts thinly sliced at a sharp angle
+      1tablespoon granulated sugar
+      ¼cup sake
+      2tablespoons soy sauce
+      2tablespoons mirin
+      FOR SERVING
+      2tablespoons soy sauce, plus more as needed
+      3tablespoons mirin, plus more as needed
+      1pound fresh or frozen udon noodles
+      Shichimi or nanami togarashi, or use your favorite chile powder (optional)",
+      preparation: "Step 1
+      Make the dashi: Combine 2 quarts cold water and the kombu in a medium saucepan, and place over medium heat. As soon as the water boils, remove from heat and add the katsuobushi, pushing it gently into the water to submerge (don’t stir vigorously). Steep for 5 to 10 minutes. Strain and discard the kombu and katsuobushi (or reserve to make another batch of weaker dashi) and return the dashi to the saucepan. Keep warm, but don’t let it boil.
+      
+      Step 2
+      Cook the beef: Combine the shaved beef, onion, scallion whites, sugar, sake, soy sauce, mirin and 1 cup of the finished dashi in a large skillet or sauté pan. Bring to a simmer over high heat, stirring. Continue cooking over high heat, stirring frequently, until the beef and onions are tender and the mixture is still moist but not soupy, 10 to 15 minutes.
+      
+      Step 3
+      As beef cooks, bring a pot of unsalted water to a boil — udon noodles are typically made with plenty of salt in the dough — and cook the udon noodles according to package directions.
+      
+      Step 4
+      To serve, add the soy sauce and mirin to the reserved dashi and stir. Taste and adjust seasoning to taste with more soy sauce or mirin. (The broth should have a balanced savory-sweet flavor.)
+      
+      Step 5
+      Divide the cooked noodles across 4 large serving bowls. Ladle the broth on top of the noodles. Divide the beef and onion mixture evenly across the noodles, including any liquid in the pan. Top each bowl with sliced scallion greens. (You may have extra.) Serve immediately with shichimi togarashi to taste.
+      
+      TIPS
+      You can use instant dashi powder, such as Hondashi, in place of homemade dashi. Katsuobushi, kombu and shichimi togarashi can be found at any Japanese supermarket or many well-stocked Western supermarkets, or ordered online. You can find thinly shaved beef intended for shabu-shabu, sukiyaki or other hot pots at most Asian supermarkets. Alternatively, if you have a source for high-quality shaved beef for cheesesteaks, you can use that. If you can’t find shaved beef, you can use regular ground beef (any fat percentage will do) to achieve different but delicious results.
+      If you prefer, you can turn this recipe into gyudon (Japanese beef and rice bowls): Omit the noodles and broth (making only enough dashi to cook the beef) and serve the cooked beef mixture on top of bowls of steamed white rice. Garnish with beni shoga (pickled red ginger) and a poached or fried egg.",
+      meal_category: "Dinner",
+      org_category: "Trending Recipes",
+      author: "J. Kenji López-Alt",
+      image_url: "https://static01.nyt.com/images/2022/10/19/dining/19kenjirex-udon1/19kenji3-master768.jpg?w=1280&q=75"
+    )
+
+    Recipe.create!(
+      name: "Spicy Korean Rice Cakes (Tteokbokki)",
+      cooking_time: "20 minutes",
+      description: "This popular street-food dish, called tteokbokki, is a garlicky, richly spiced dish of rice cakes bathed in red chile paste. Tteokbokki (pronounced duck-bo-key) got its own festival, spinning off from the larger annual Seoul festival of rice cakes, or tteok.",
+      ingredients: "Yield:
+      2 servings
+      8ounces fresh or thawed frozen tteok (see note)
+      4ounces beefsteak, such as chuck or sirloin, very thinly sliced
+      ½teaspoon soy sauce
+      2teaspoons sesame oil
+      2cloves garlic, minced
+      1small onion, thinly sliced
+      2cups green cabbage, cut crosswise into large pieces (optional)
+      1 to 2tablespoons gochujang (Korean chile paste)
+      1 to 2teaspoons sugar
+      2scallions, cut into 1-inch batons
+      Sesame seeds",
+      preparation: "Step 1
+      Soak tteok in cold water to cover while preparing the other ingredients, about 10 minutes. Drain on paper towels.
+      
+      Step 2
+      Combine beef with soy sauce, 1 teaspoon sesame oil and garlic.
+      
+      Step 3
+      Heat a wok or skillet over high heat until very hot. Add beef mixture and stir-fry just until lightly browned, 1 minute. Add onion, scallions, and cabbage, if using, and stir-fry until crisp-tender, 2 to 3 minutes.
+      
+      Step 4
+      Add gochujang and mix. Add about ⅓ cup water, remaining teaspoon sesame oil, sugar and tteok. Mix and let simmer until sauce is thick and tteok is soft, adding water a little at a time as needed. Adjust seasonings with sugar and gochujang.
+      
+      Step 5
+      Mix in scallions and serve hot, sprinkled with sesame seeds.
+      
+      TIP
+      Tteok (Korean rice cakes, also spelled dduk or toppoki) are available in Asian markets. For this dish, the traditional shape is long cylinders; cut them crosswise in half before cooking. If using dried tteok, cook according to package directions and do not soak.",
+      meal_category: "Sides",
+      org_category: "Trending Recipes",
+      author: "Julia Moskin",
+      image_url: "https://static01.nyt.com/images/2016/08/22/dining/22COOKING-KOREAN-RICE-CAKES2/22COOKING-KOREAN-RICE-CAKES2-master768.jpg?w=1280&q=75"
+    )
+
+    Recipe.create!(
+      name: "Tabbouleh",
+      cooking_time: "30 minutes",
+      description: "We think of tabbouleh as a bulgur salad with lots of parsley and mint. But real Lebanese tabbouleh is a lemony herb salad with a little bit of fine bulgur, an edible garden that you can scoop up with romaine lettuce heart leaves or simply eat with a fork. This will keep for a day in the refrigerator, though the bright green color will fade because of the lemon juice.",
+      ingredients: "Yield:
+      6 appetizer spread servings, 4 salad servings
+      ¼cup fine bulgur wheat
+      1small garlic clove, minced (optional)
+      Juice of 2 large lemons, to taste
+      3cups chopped fresh flat-leaf parsley (from 3 large bunches)
+      ¼cup chopped fresh mint
+      ½pound ripe tomatoes, very finely chopped
+      1bunch scallions, finely chopped
+      Salt, preferably kosher salt, to taste
+      ¼cup extra virgin olive oil
+      1romaine lettuce heart, leaves separated, washed and dried",
+      preparation: "Step 1
+      Place the bulgur in a bowl, and cover with water by ½ inch. Soak for 20 minutes, until slightly softened. Drain through a cheesecloth-lined strainer, and press the bulgur against the strainer to squeeze out excess water. Transfer to a large bowl, and toss with the garlic, lemon juice, parsley, mint, tomatoes, scallions and salt. Leave at room temperature or in the refrigerator for two to three hours, so that the bulgur can continue to absorb liquid and swell.
+      
+      Step 2
+      Add the olive oil, toss together, taste and adjust seasonings. Serve with lettuce leaves.",
+      meal_category: "Sides",
+      org_category: "Trending Recipes",
+      author: "Martha Rose Shulman",
+      image_url: "https://static01.nyt.com/images/2023/05/25/multimedia/MRS-Lebanese-Tabbouleh-wzpk/MRS-Lebanese-Tabbouleh-wzpk-master768.jpg?w=1280&q=75"
+    )
+
+    Recipe.create!(
+      name: "Cheesy Breakfast Egg and Polenta Casserole",
+      cooking_time: "30 minutes",
+      description: "If you’ve had the pleasure of a cheesy polenta dinner, topped with a creamy-yolked egg, you can imagine how good that combination is at breakfast. This quick casserole for a crowd is exactly that, made elegant and easy so you can have a perfectly cooked portion for each person with very little work. Layer your polenta with anything you desire, whether salami or ham — or keep it vegetable-centric with spinach or oven-roasted tomatoes. Make nests between your toppings and the polenta where the eggs will cook slowly, giving you a soft-cooked finish that’s loaded with flavor.",
+      ingredients: "Yield:
+      8 servings
+      2tablespoons unsalted butter, plus more for greasing the pan
+      1cup quick-cooking polenta
+      ½teaspoon fine sea salt
+      1cup whole milk
+      ½cup/2 ounces fontina or mozzarella, or a blend, shredded
+      5ounces thinly sliced cured meat, such as hot or sweet Italian sausage, salami or ham (optional)
+      1packed cup spinach, kale or other leafy green, torn or chopped (optional)
+      8large eggs
+      ½cup/2 ounces grated Parmesan
+      Ground black pepper
+      ¼cup packed basil leaves, larger ones roughly torn (optional)",
+      preparation: "Step 1
+      Heat oven to 400 degrees with the rack in the center. Generously butter a 9-by-13-inch pan and set aside.
+      
+      Step 2
+      Bring 4 cups water to a boil. Gradually whisk in the polenta and salt, and cook, stirring constantly until the polenta bubbles and pulls away from the pan, about 3 minutes. Vigorously stir in the milk, butter and cheese until smooth and creamy. (It will seem loose.)
+      
+      Step 3
+      Spread the polenta onto the bottom of the prepared pan. Layer with meat, greens or anything else you desire. Use the back of a large spoon to create 8 small wells in the polenta. Crack the eggs inside, sprinkle with Parmesan, and bake 10 to 15 minutes, depending on how set you like your eggs. Let stand for 5 minutes; sprinkle with black pepper and basil and serve warm.",
+      meal_category: "Breakfast",
+      org_category: "Trending Recipes",
+      author: "Sarah Copeland",
+      image_url: "https://static01.nyt.com/images/2018/11/16/dining/sc-breakfast-polenta/sc-breakfast-polenta-master768-v2.jpg?w=1280&q=75"
+    )
+
     # Recipe.create!(
     #   name: "",
     #   cooking_time: "",

@@ -1,4 +1,31 @@
 
 .recipe-index-container {
     margin-left: 50px;
+    margin-right: 50px;
+}
+
+.lovely-layer-cakes-carousel {
+    border-top: 7px solid #222;
+    margin-top: 50px;
+}
+
+#lovely-layer-cakes-title {
+    font-family: nyt-cheltenham,Georgia,"Times New Roman",serif;
+    font-weight:lighter;
+    font-size: 28px;
+    text-decoration: underline;
+    margin: 0px;
+    padding-top: 12px;
+    letter-spacing: .4px;
+    line-height: 1.2;
+}
+
+#lovely-layer-cakes-tagline {
+    color: #999;
+    font-weight: lighter;
+    font-size: 28px;
+    padding-top: 5px;
+    margin-bottom: 15px;
+    letter-spacing: .4px;
+    line-height: 1.2;
 }

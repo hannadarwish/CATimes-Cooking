@@ -8,6 +8,7 @@ import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-re
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import './RecipeCarousel.css'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { GrBookmark } from 'react-icons/gr';
 
 
 export default function RecipeCarousel({recipes}) {
@@ -27,7 +28,7 @@ export default function RecipeCarousel({recipes}) {
         <div className="carousel-container">
             <CarouselProvider
                 naturalSlideWidth={120}
-                naturalSlideHeight={140}
+                naturalSlideHeight={130}
                 totalSlides={6}
                 visibleSlides={4}
                 dragEnabled = {false}
@@ -40,6 +41,9 @@ export default function RecipeCarousel({recipes}) {
                         <div className="slide-content">
                             <h3 id="recipe-name">{recipes[0].name}</h3>
                             <p id="author-name">{recipes[0].author}</p>
+                            <div id="cooking-time-bookmark">{recipes[0].cookingTime}
+                                {<GrBookmark id="slide-bookmark" />}  
+                            </div>
                         </div>
                     </div>
                 </Slide>
@@ -49,6 +53,9 @@ export default function RecipeCarousel({recipes}) {
                         <div className="slide-content">
                             <h3 id="recipe-name">{recipes[1].name}</h3>
                             <p id="author-name">{recipes[1].author}</p>
+                            <div id="cooking-time-bookmark">{recipes[1].cookingTime}
+                                {<GrBookmark id="slide-bookmark" />}  
+                            </div>
                         </div>
                     </div>
                 </Slide>
@@ -58,6 +65,9 @@ export default function RecipeCarousel({recipes}) {
                         <div className="slide-content">
                             <h3 id="recipe-name">{recipes[2].name}</h3>
                             <p id="author-name">{recipes[2].author}</p>
+                            <div id="cooking-time-bookmark">{recipes[2].cookingTime}
+                                {<GrBookmark id="slide-bookmark" />}  
+                            </div>
                         </div>
                     </div>
                 </Slide>
@@ -67,6 +77,9 @@ export default function RecipeCarousel({recipes}) {
                         <div className="slide-content">
                             <h3 id="recipe-name">{recipes[3].name}</h3>
                             <p id="author-name">{recipes[3].author}</p>
+                            <div id="cooking-time-bookmark-edit">{recipes[3].cookingTime}
+                                {<GrBookmark id="slide-bookmark" />}  
+                            </div>
                         </div>
                     </div>
                 </Slide>
@@ -76,6 +89,9 @@ export default function RecipeCarousel({recipes}) {
                         <div className="slide-content">
                             <h3 id="recipe-name">{recipes[4].name}</h3>
                             <p id="author-name">{recipes[4].author}</p>
+                            <div id="cooking-time-bookmark">{recipes[4].cookingTime}
+                                {<GrBookmark id="slide-bookmark" />}  
+                            </div>
                         </div>
                     </div>
                 </Slide>
@@ -85,6 +101,9 @@ export default function RecipeCarousel({recipes}) {
                         <div className="slide-content">
                             <h3 id="recipe-name">{recipes[5].name}</h3>
                             <p id="author-name">{recipes[5].author}</p>
+                            <div id="cooking-time-bookmark-edit">{recipes[5].cookingTime}
+                                {<GrBookmark id="slide-bookmark" />}  
+                            </div>
                         </div>
                     </div>
                 </Slide>

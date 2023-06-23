@@ -20,30 +20,64 @@
     width: 1000px;
 }
 
-.slide {
-    border: 1px solid grey;
+.slide-container {
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: white;
+    padding-bottom: 100px;
 }
 
 #slide-img {
     height: 157px;
     width: 100%;
     object-fit: cover;
+    padding-right: 10px;
 }
 
 .slide-content {
     margin-top: 10px;
-    background-color: blue;
+    font-family: 'Libre Franklin', sans-serif;
+    line-height: 1.06em;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 10px;
 }
 
 #recipe-name {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
+    padding-top: 5px;
 }
 
 #author-name {
     margin-top: 5px;
-    font-size: 14px;
-    color: #888;
+    font-size: 12px;
+    color: black
+}
+
+#cooking-time-bookmark {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    color: #999;
+    padding-top: 15px;
+    font-weight: 100;
+}
+
+#cooking-time-bookmark-edit {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    color: #999;
+    padding-top: 30px;
+    font-weight: 100;
+}
+
+#slide-bookmark {
+    font-size: 20px;
+    color: #999;
 }
 
 

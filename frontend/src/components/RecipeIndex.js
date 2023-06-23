@@ -27,7 +27,8 @@ export default function RecipeIndex() {
             { recipes.length === 0 ? <h1>loading...</h1> : 
             <div>
                 <section className="lovely-layer-cakes-carousel">
-                    <h2>Lovely Layer Cakes</h2>
+                    <h2 id="lovely-layer-cakes-title">Lovely Layer Cakes</h2>
+                    <h3 id="lovely-layer-cakes-tagline">They’re not just for birthdays.</h3>
                     <RecipeCarousel recipes={lovelyLayerCakes} />
                 </section>
                 <section className="trending-recipes-carousel">

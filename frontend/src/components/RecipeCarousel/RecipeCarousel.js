@@ -27,7 +27,7 @@ export default function RecipeCarousel({recipes}) {
             
             <CarouselProvider
                 naturalSlideWidth={120}
-                naturalSlideHeight={130}
+                naturalSlideHeight={135}
                 totalSlides={6}
                 visibleSlides={4}
                 dragEnabled = {false}

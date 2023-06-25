@@ -663,6 +663,44 @@ ApplicationRecord.transaction do
       image_url: "https://static01.nyt.com/images/2018/11/16/dining/sc-breakfast-polenta/sc-breakfast-polenta-master768-v2.jpg?w=1280&q=75"
     )
 
+    Recipe.create!(
+      name: "Pasta Salad",
+      cooking_time: "30 minutes",
+      description: "This pasta salad has everything you could want in the bowl: loads of ripe tomatoes, chunks of mozzarella, sliced olives, salami and plenty of fresh green herbs, all tossed in a garlicky, oregano-spiked red wine vinaigrette. Serve it the same day it’s made for the brightest flavor and best texture.",
+      ingredients: "Yield:
+      8 to 10
+      FOR THE DRESSING
+      3tablespoons red wine vinegar, plus more to taste
+      1garlic clove, finely grated or minced
+      1teaspoon dried oregano
+      Salt and freshly ground black pepper
+      ⅓cup extra-virgin olive oil, plus more for drizzling
+      FOR THE PASTA
+      1pound short-cut pasta, such as farfalle
+      1pint cherry or grape tomatoes, halved
+      8ounces mozzarella, cubed (or use small mozzarella balls)
+      4ounces sliced salami, cut into ¼-inch ribbons
+      ¾cup sliced Kalamata olives
+      ½cup thinly sliced cucumber
+      3tablespoons diced red onion
+      1cup coarsely chopped fresh parsley and basil leaves",
+      preparation: "Step 1
+      Make the dressing: Combine vinegar, garlic, oregano and a big pinch each salt and pepper in a large bowl. Whisk in oil; taste and add more salt, pepper or vinegar as needed. Set aside.
+      
+      Step 2
+      Prepare the pasta: Bring a large pot of heavily salted water to a boil. Cook the pasta according to the package directions until the pasta is al dente. Drain well, transfer to the large bowl, and toss with the dressing while still warm.
+      
+      Step 3
+      Add tomatoes, mozzarella, salami, olives, cucumber and onion to the bowl and toss well; fold in herbs. Taste and season with more salt, pepper and vinegar, if you like.
+      
+      Step 4
+      Drizzle with olive oil and top with cracked black pepper just before serving.",
+      meal_category: "Sides",
+      org_category: "Recipe of the Day",
+      author: "Melissa Clark",
+      image_url: "https://static01.nyt.com/images/2022/07/15/dining/MC-Classic-Pasta-Salad-15SALADREX/MC-Classic-Pasta-Salad-15SALADREX-master768.jpg?w=1280&q=75"
+    )
+
     # Recipe.create!(
     #   name: "",
     #   cooking_time: "",

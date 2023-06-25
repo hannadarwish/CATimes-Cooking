@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchRecipe, getRecipe } from '../../store/recipes';
 import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import CookingNotesForm from '../CookingNotesForm';
 
 export default function RecipeShow() {
 
@@ -26,7 +27,7 @@ export default function RecipeShow() {
                     <h1 id="recipe-name-show">{recipe.name}</h1>
                     <p id="recipe-author-show">By <span id="author-underline">{recipe.author}</span></p>
                 </div>
-                <img src={recipe.imageUrl}></img>
+                <img id="recipe-show-img"src={recipe.imageUrl}></img>
             </div>
             <div className="details-description-container">
                 <div id="time-rating-notes">
@@ -61,7 +62,7 @@ export default function RecipeShow() {
                 </div>
                 <div id="cooking-notes-container">
                     <p>COOKING NOTES</p>
-                    {/* <CookingNotesForm/> */}
+                    <CookingNotesForm recipeId={recipeId}/>
                     {/* <CookingNotesIndex /> */}
                 </div>
             </div>

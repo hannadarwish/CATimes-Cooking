@@ -72,9 +72,11 @@ export const signup = (user) => async (dispatch) => {
 };
 
 export const logout = () => async (dispatch) => {
+    debugger
     const response = await csrfFetch("/api/session", {
         method: "DELETE"
     });
+    // debugger
     storeCurrentUser(null);
     dispatch(removeCurrentUser());
     return response;
@@ -84,9 +86,9 @@ export const logout = () => async (dispatch) => {
 const sessionReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_CURRENT_USER:
-            return { ...state, user: action.payload };
+            return { user: action.payload };
         case REMOVE_CURRENT_USER:
-            return { ...state, user: null };
+            return { user: null };
         default:
             return state;
     };

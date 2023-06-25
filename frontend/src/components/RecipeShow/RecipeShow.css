@@ -35,7 +35,7 @@
     text-decoration: underline;
 }
 
-img {
+#recipe-show-img {
     margin-top: 20px;
     width: 100%;
     height: auto;

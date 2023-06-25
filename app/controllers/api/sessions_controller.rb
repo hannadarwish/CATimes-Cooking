@@ -31,7 +31,9 @@ class Api::SessionsController < ApplicationController
   def destroy
     # log out the current_user, if one exists
     # render { message: 'success' } as JSON
-    logout!
+    if @current_user 
+      logout!
+    end
     render json: { message: "success" }
   end
 

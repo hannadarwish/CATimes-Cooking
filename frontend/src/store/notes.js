@@ -13,7 +13,7 @@ export const receiveNote = (note) => ({
 
 export const receiveNotes = (notes) => ({
     type: RECEIVE_NOTES,
-    note: notes,
+    notes: notes,
 });
 
 export const removeNote = (noteId) => ({
@@ -32,12 +32,15 @@ export const getNotes = (state) => (
 
 //thunk action creators
 
-export const fetchNotes = () => async (dispatch) => {
-    const response = await fetch('/api/notes');
+export const fetchNotes = (recipeId) => async (dispatch) => {
+    const response = await fetch(`/api/notes?recipeId=${recipeId}`);
 
     if (response.ok) {
         const notes = await response.json();
         dispatch(receiveNotes(notes));
+        console.log("Successfully fetched notes.")
+    } else {
+        console.log("Failed to fetch notes.")
     }
 }
 
@@ -54,7 +57,6 @@ export const fetchNote = (noteId) => async (dispatch) => {
 
 export const createNote = (note) => async (dispatch) => {
     const {body, reviewer_name, recipe_id} = note;
-    debugger 
 
     const response = await csrfFetch("/api/notes", {
         method: "POST",

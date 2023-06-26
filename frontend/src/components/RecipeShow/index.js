@@ -5,6 +5,7 @@ import { fetchRecipe, getRecipe } from '../../store/recipes';
 import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import CookingNotesForm from '../CookingNotesForm';
+import CookingNotesIndex from '../CookingNotesIndex';
 
 export default function RecipeShow() {
 
@@ -63,7 +64,7 @@ export default function RecipeShow() {
                 <div id="cooking-notes-container">
                     <p>COOKING NOTES</p>
                     <CookingNotesForm recipeId={recipeId}/>
-                    {/* <CookingNotesIndex /> */}
+                    <CookingNotesIndex recipeId={recipeId} />
                 </div>
             </div>
             <div className="newsletter-section-container">

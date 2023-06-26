@@ -19,9 +19,9 @@ export default function CookingNotesForm({recipeId}) {
 
     useEffect(() => {
         if (formType === "Edit Note") {
-            dispatch(fetchNote(noteId))
+            dispatch(fetchNote(noteId));
         }
-    }, [noteId])
+    }, [dispatch, noteId]);
 
     const [body, setBody] = useState(note.body);
     const [reviewerName, setReviewerName] = useState(note.reviewer_name); //reviewerName?
@@ -36,13 +36,14 @@ export default function CookingNotesForm({recipeId}) {
             recipe_id: recipeId
         }
 
-        debugger
-
         if (formType === "Add Note") {
             dispatch(createNote(newNote))
         } else {
             dispatch(updateNote(newNote))
         }
+
+        setBody("");
+        setReviewerName("");
     }
 
         return (
@@ -66,3 +67,4 @@ export default function CookingNotesForm({recipeId}) {
         )
 
 }
+

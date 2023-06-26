@@ -12,11 +12,15 @@ export default function CookingNotesIndex({recipeId }) {
         dispatch(fetchNotes(recipeId));
     }, [dispatch, recipeId]);
 
+    let numNotes = notes.length
+
 
     return (
         <div className="cooking-notes-index-container">
+            <div id="all-notes-text-container">
+                <h3 id="all-notes-text">All Notes <span id="num-notes">({numNotes})</span> </h3>
+            </div>
             <ul className="notes-index-ul">
-                HELLO FROM NOTES INDEX
                 {notes.map(note => (
                     <CookingNote note={note} key={note.id} /> //key is optional
                 ))}

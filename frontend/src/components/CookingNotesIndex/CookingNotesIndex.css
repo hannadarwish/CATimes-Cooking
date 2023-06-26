@@ -1,6 +1,19 @@
 
 .cooking-notes-index-container {
-    background-color: pink;
-    width: 500px;
-    height: 300px;
+    width: 100%;
+}
+
+#all-notes-text {
+    font-family: 'Libre Franklin', sans-serif;
+    letter-spacing: .01em;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+#num-notes {
+    font-family: 'Libre Franklin', sans-serif;
+    letter-spacing: .01em;
+    font-size: 14px;
+    font-weight: normal;
 }

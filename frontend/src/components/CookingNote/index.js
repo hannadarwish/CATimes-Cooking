@@ -3,6 +3,7 @@ import { deleteNote } from "../../store/notes";
 import { useDispatch } from "react-redux";
 import CookingNotesForm from "../CookingNotesForm";
 import { useState } from "react";
+import './CookingNote.css'
 
 export default function CookingNote({note}) {
     const dispatch = useDispatch();
@@ -14,14 +15,14 @@ export default function CookingNote({note}) {
     }
 
     return (
-    
-        <div className="cooking-note-container">
-            <p>{note.body}</p>
-            <span>{note.reviewerName}</span>
-            <button onClick={handleEdit} >Edit</button>
-            <button onClick={() => dispatch(deleteNote(note.id))}>Delete</button>
+        <div id="cooking-note-container">
+            <span id="note-reviewer-name">HELLO{note.reviewerName}</span>
+            <p id="note-body-text">{note.body}</p>
+            <div id="note-buttons-container">
+                <button className="note-edit-delete-buttons" onClick={handleEdit} >Edit</button>
+                <button className="note-edit-delete-buttons" onClick={() => dispatch(deleteNote(note.id))}>Delete</button>
+            </div>
             {showForm ?  <CookingNotesForm recipeId={note.recipeId} formType={"Edit Note"} note={note} setShowForm={setShowForm} />  : null }
         </div>
-
     )
 }

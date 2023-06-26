@@ -1,6 +1,35 @@
 
-.cooking-note-container {
-    background-color: green;
-    width: 700px;
-    height: 600px;
+#cooking-note-container {
+    border-top: 1px solid lightgrey;
+    padding: 15px;
+}
+
+#note-reviewer-name {
+    font-family: 'Libre Franklin', sans-serif;
+    letter-spacing: .01em;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#note-body-text {
+    font-family: 'Libre Franklin', sans-serif;
+    letter-spacing: .01em;
+    font-size: 14px;
+}
+
+#note-buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    padding-top: 30px;
+}
+
+.note-edit-delete-buttons {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: white;
+    color: #717171;
 }

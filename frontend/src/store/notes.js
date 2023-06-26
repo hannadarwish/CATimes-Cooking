@@ -38,7 +38,6 @@ export const fetchNotes = (recipeId) => async (dispatch) => {
     if (response.ok) {
         const notes = await response.json();
         dispatch(receiveNotes(notes));
-        console.log("Successfully fetched notes.")
     } else {
         console.log("Failed to fetch notes.")
     }

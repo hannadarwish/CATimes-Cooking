@@ -16,7 +16,7 @@ export default function CookingNote({note}) {
 
     return (
         <div id="cooking-note-container">
-            <span id="note-reviewer-name">HELLO{note.reviewerName}</span>
+            <span id="note-reviewer-name">{note.reviewerName}</span>
             <p id="note-body-text">{note.body}</p>
             <div id="note-buttons-container">
                 <button className="note-edit-delete-buttons" onClick={handleEdit} >Edit</button>

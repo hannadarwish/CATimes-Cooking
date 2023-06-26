@@ -1,0 +1,1 @@
+json.extract! @note, :id, :recipe_id, :body, :author_id, :reviewer_name 

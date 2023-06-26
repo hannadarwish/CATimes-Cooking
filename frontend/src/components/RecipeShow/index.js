@@ -43,11 +43,11 @@ export default function RecipeShow() {
             </div>
             <div className="ingredients-preparation-container">
                 <div id="ingredients">
-                    <p>INGREDIENTS</p>
+                    <p id="ingredients-text">INGREDIENTS</p>
                     {recipe.ingredients} 
                 </div >
                 <div id="preparation"> 
-                    <p>PREPARATION</p>
+                    <p id="preparation-text">PREPARATION</p>
                     {recipe.preparation}
                 </div>
             </div>

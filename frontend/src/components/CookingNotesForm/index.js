@@ -15,7 +15,7 @@ export default function CookingNotesForm({recipeId, formType, note, setShowForm}
     }
 
     const [body, setBody] = useState(note.body);
-    const [reviewerName, setReviewerName] = useState(note.reviewer_name);
+    const [reviewerName, setReviewerName] = useState(note.reviewerName);
 
     const handleSubmit = (e) => {
         e.preventDefault();

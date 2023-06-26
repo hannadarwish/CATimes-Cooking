@@ -16,7 +16,7 @@ class Api::NotesController < ApplicationController
         @note.author_id = current_user.id
 
         if @note.save
-            render json: @note, status: :created 
+            render :show
         else    
             render json: @note.errors, status: :unprocessable_entity
         end
@@ -25,7 +25,7 @@ class Api::NotesController < ApplicationController
     def update 
         @note = Note.find(params[:id])
         if @note.update(note_params)
-            render json: @note, status: :ok
+            render :show
         else
             render json: @note.errors, status: :unprocessable_entity
         end

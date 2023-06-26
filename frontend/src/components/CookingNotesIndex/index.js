@@ -4,7 +4,7 @@ import CookingNote from "../CookingNote";
 import { getNotes, fetchNotes } from "../../store/notes";
 import './CookingNotesIndex.css'
 
-export default function CookingNotesIndex({recipeId}) {
+export default function CookingNotesIndex({recipeId }) {
     const notes = useSelector(getNotes);
     const dispatch = useDispatch();
 

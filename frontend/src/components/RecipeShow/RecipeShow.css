@@ -104,3 +104,10 @@
 #about-us-text {
     padding-right: 50px;
 }
+
+#cooking-notes-text, #ratings-text {
+    font-family: 'Patua One', cursive;
+    letter-spacing: .08em;
+    line-height: 1.45;
+    font-size: 18px;
+}

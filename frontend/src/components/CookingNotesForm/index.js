@@ -3,11 +3,9 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getNote, fetchNote, createNote, updateNote } from '../../store/notes';
+import './CookingNotesForm.css'
 
-export default function CookingNotesForm({recipeId}) {
-    const { noteId } = useParams();
-    const formType = noteId ? "Edit Note" : "Add Note";
-    let note = useSelector(getNote(noteId));
+export default function CookingNotesForm({recipeId, formType, note, setShowForm}) {
     const dispatch = useDispatch();
 
     if (formType === "Add Note") {
@@ -17,14 +15,8 @@ export default function CookingNotesForm({recipeId}) {
         }
     }
 
-    useEffect(() => {
-        if (formType === "Edit Note") {
-            dispatch(fetchNote(noteId));
-        }
-    }, [dispatch, noteId]);
-
     const [body, setBody] = useState(note.body);
-    const [reviewerName, setReviewerName] = useState(note.reviewer_name); //reviewerName?
+    const [reviewerName, setReviewerName] = useState(note.reviewer_name);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -40,6 +32,7 @@ export default function CookingNotesForm({recipeId}) {
             dispatch(createNote(newNote))
         } else {
             dispatch(updateNote(newNote))
+            setShowForm(false);
         }
 
         setBody("");
@@ -48,14 +41,15 @@ export default function CookingNotesForm({recipeId}) {
 
         return (
             <form onSubmit={handleSubmit}>
-                <h1>{formType}</h1>
+                <h1 id="form-title">{formType}</h1>
                 <label>
-                    <textarea 
+                    <textarea id="note-text-area" 
                         type='text'
                         value={body}
                         onChange={(e) => setBody(e.target.value)}
                     />
                 </label>
+                <br/>
                 <label>Your Name
                     <input 
                         value={reviewerName}

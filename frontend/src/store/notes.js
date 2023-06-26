@@ -50,6 +50,7 @@ export const fetchNote = (noteId) => async (dispatch) => {
     if (response.ok) {
         const note = await response.json();
         dispatch(receiveNote(note.note));
+        console.log("Successfully fetched note.")
     } else {
         console.log('Note not found');
     }

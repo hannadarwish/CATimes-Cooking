@@ -3,7 +3,7 @@ import './RecipeShow.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRecipe, getRecipe } from '../../store/recipes';
 import { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import CookingNotesForm from '../CookingNotesForm';
 import CookingNotesIndex from '../CookingNotesIndex';
 
@@ -53,7 +53,7 @@ export default function RecipeShow() {
             </div>
             <div className="ratings-notes-container">
                 <div id="ratings-section">
-                    <p>RATINGS</p>
+                    <p id="ratings-text">RATINGS</p>
                     <div id="stars-container">
                         Stars Section
                     </div>
@@ -62,9 +62,9 @@ export default function RecipeShow() {
                     </div>
                 </div>
                 <div id="cooking-notes-container">
-                    <p>COOKING NOTES</p>
-                    <CookingNotesForm recipeId={recipeId}/>
-                    <CookingNotesIndex recipeId={recipeId} />
+                    <p id="cooking-notes-text">COOKING NOTES</p>
+                        <CookingNotesForm recipeId={recipeId} formType={"Add Note"} />
+                        <CookingNotesIndex recipeId={recipeId} />
                 </div>
             </div>
             <div className="newsletter-section-container">

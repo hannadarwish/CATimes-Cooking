@@ -1,0 +1,12 @@
+#form-title {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: .01em;
+    line-height: 1.45;
+    margin-top: 20px;
+}
+
+#note-text-area {
+    width: 600px;
+}

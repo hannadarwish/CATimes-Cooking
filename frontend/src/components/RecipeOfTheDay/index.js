@@ -5,7 +5,9 @@ function RecipeOfTheDay() {
 
     return (
         <div className="recipe-of-the-day-container">
-            <img id="recipe-of-the-day-image" src="https://cft-cooking-seeds.s3.us-west-1.amazonaws.com/aws-fullstack-images/pasta-salad-large.jpeg" />
+            <a href="/recipes/13">
+                <img id="recipe-of-the-day-image" src="https://cft-cooking-seeds.s3.us-west-1.amazonaws.com/aws-fullstack-images/pasta-salad-large.jpeg" />
+            </a>
             <div className="recipe-of-the-day-text-container">
                 <div className="rotd-badge">
                     RECIPE

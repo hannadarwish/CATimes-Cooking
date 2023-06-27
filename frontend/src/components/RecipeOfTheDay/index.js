@@ -5,7 +5,7 @@ function RecipeOfTheDay() {
 
     return (
         <div className="recipe-of-the-day-container">
-            <img id="recipe-of-the-day-image" src="https://static01.nyt.com/images/2022/07/15/dining/MC-Classic-Pasta-Salad-15SALADREX/MC-Classic-Pasta-Salad-15SALADREX-threeByTwoMediumAt2X.jpg" />
+            <img id="recipe-of-the-day-image" src="https://cft-cooking-seeds.s3.us-west-1.amazonaws.com/aws-fullstack-images/pasta-salad-large.jpeg" />
             <div className="recipe-of-the-day-text-container">
                 <div className="rotd-badge">
                     RECIPE

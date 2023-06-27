@@ -1,5 +1,7 @@
 class Api::RecipesController < ApplicationController
 
+    before_action :require_logged_in, only: [:show]
+
     def index
         @recipes = Recipe.all
         render :index

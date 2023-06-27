@@ -36,7 +36,11 @@ export default function CookingNotesForm({recipeId, formType, note, setShowForm}
 
         setBody("");
         setReviewerName("");
-    }
+    };
+
+    const handleCancel = (e) => {
+        setShowForm(false);
+    };
 
     if (formType === "Add Note") {
         return (
@@ -90,7 +94,10 @@ export default function CookingNotesForm({recipeId, formType, note, setShowForm}
                     />
                 </label>
                 <br/>
-                <button>{formType}</button>
+                <div id="edit-note-button-container">
+                    <button type="button" id="cancel-button" onClick={handleCancel}>Cancel</button>
+                    <button id="edit-note-submit-button">{formType}</button>
+                </div>
             </form>
         )
     }

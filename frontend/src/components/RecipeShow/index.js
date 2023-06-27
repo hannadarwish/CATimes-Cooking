@@ -20,6 +20,7 @@ export default function RecipeShow() {
     if (!recipe) {
         return <div>Loading...</div>; // Render a loading state while fetching the recipe
     }
+
     
     return (
         <div className='recipe-show-container'>
@@ -86,5 +87,6 @@ export default function RecipeShow() {
             </div>
         </div>
     )
+    
 
 }

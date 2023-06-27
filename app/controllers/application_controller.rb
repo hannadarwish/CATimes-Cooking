@@ -35,8 +35,8 @@ class ApplicationController < ActionController::API
     # add as a before_action callback for any controller actions that require a logged-in user.
     def require_logged_in
         #not going to redirect, just send a json error message
-        if !logged_in
-            render json: {message: ["Must be logged in"]}, status: unauthorized
+        if !logged_in?
+            render json: {message: ["Must be logged in"]}, status: :unauthorized
         end
     end
 

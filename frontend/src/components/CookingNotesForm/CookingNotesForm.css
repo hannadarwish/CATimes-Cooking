@@ -1,5 +1,5 @@
 
-#form-title, #your-name-text {
+#form-title, #your-name-text, #edit-form-title, #edit-your-name-text {
     font-family: 'Libre Franklin', sans-serif;
     font-weight: bold;
     font-size: 14px;
@@ -9,7 +9,7 @@
     margin-bottom: 10px;
 }
 
-#note-text-area {
+#note-text-area, #edit-note-text-area {
     min-width: 550px;
     width: 100%;
     min-height: 100px;
@@ -22,7 +22,7 @@
     right: 300px;
 }
 
-#your-name-text-area {
+#your-name-text-area, #edit-your-name-text-area {
     min-width: 550px;
     min-height: 20px;
     width: 100%;
@@ -35,13 +35,13 @@
     margin-top: 10px;
 }
 
-#add-note-button-container {
+#add-note-button-container, #edit-note-button-container {
     display: flex;
     justify-content: flex-end;
     padding-right: 30px;
 }
 
-#add-note-submit-button {
+#add-note-submit-button, #edit-note-submit-button, #cancel-button{
     border-radius: 20px;
     border: 1px solid lightgray;
     padding-top: 10px;
@@ -59,6 +59,10 @@
     transition: background-color 0.3s ease;
 }
 
-#add-note-submit-button:hover {
+#add-note-submit-button:hover, #edit-note-submit-button:hover, #cancel-button:hover{
     background-color: #cacaca;
+}
+
+#edit-note-button-container {
+    gap: 10px;
 }

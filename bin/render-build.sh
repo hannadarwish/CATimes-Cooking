@@ -5,6 +5,6 @@ set -o errexit
 
 npm run build
 bundle install
-rails db:truncate_all
+# rails db:truncate_all #if needed
 rails db:migrate
-rails db:seed #if needed
+# rails db:seed #if needed

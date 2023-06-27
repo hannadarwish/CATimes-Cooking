@@ -2,25 +2,35 @@
 import './RecipeShow.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRecipe, getRecipe } from '../../store/recipes';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import CookingNotesForm from '../CookingNotesForm';
 import CookingNotesIndex from '../CookingNotesIndex';
+import LoginForm from '../LoginFormModal/LoginForm';
+import { Modal } from '../../context/Modal';
 
 export default function RecipeShow() {
 
     const { recipeId } = useParams();
     const recipe = useSelector(getRecipe(recipeId));
     const dispatch = useDispatch();
+    const [showLoginModal, setShowLoginModal] = useState(false);
+    const isLoggedIn = useSelector(state => state.session.user);
 
     useEffect(() => {
         dispatch(fetchRecipe(recipeId));
-    }, [dispatch, recipeId]);
+    }, [dispatch, recipeId, isLoggedIn]);
+
+    useEffect(() => {
+        // Check if the user is logged in
+        if (isLoggedIn === null) {
+            setShowLoginModal(true);
+        }
+    }, [isLoggedIn]);
 
     if (!recipe) {
-        return <div>Loading...</div>; // Render a loading state while fetching the recipe
+        return <div>{showLoginModal && <Modal onClose={() => setShowLoginModal(false)}><LoginForm /></Modal>}</div>; // Render a loading state while fetching the recipe
     }
-
     
     return (
         <div className='recipe-show-container'>

@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import SignupFormPage from "./components/SignupFormPage";
 import Navigation from "./components/Navigation";
 import RecipeBox from "./components/RecipeBox";
 import EasyWeeknightDinners from "./components/EasyWeeknightDinners";
@@ -17,7 +16,7 @@ function App() {
             <RecipeOfTheDay />
             <RecipeIndex />
           </Route>
-          <Route path="/recipebox">
+          <Route exact path="/recipebox">
             <RecipeBox />
           </Route>
           <Route exact path="/recipes/:recipeId">

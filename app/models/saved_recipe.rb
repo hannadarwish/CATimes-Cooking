@@ -15,6 +15,8 @@ class SavedRecipe < ApplicationRecord
 
     validates :user_id, presence: true
     validates :recipe_id, presence: true
-    validates :recipe_id, uniqueness: { scope: :user_id } # prevents duplicate saved recipes for the same user and recipe
+    validates :recipe_id, uniqueness: { scope: :user_id } 
+    # prevents duplicate saved recipes for the same user and recipe
 
 end
+

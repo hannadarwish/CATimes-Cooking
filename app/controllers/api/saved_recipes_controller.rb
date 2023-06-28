@@ -1,19 +1,20 @@
 class Api::SavedRecipesController < ApplicationController
 
-    # def index 
-    #     # get saved recipes associated with current user
-    #     @saved_recipes = current_user.saved_recipes 
-    #     render json: @saved_recipes
-    # end
+    def index 
+        # get saved recipes associated with current user
+        @saved_recipes = current_user.saved_recipes 
+        render :index 
+    end
 
     def create
         @saved_recipe = SavedRecipe.new(saved_recipe_params)
         @saved_recipe.user = current_user 
 
         if @saved_recipe.save
-            render json: @saved_recipe, status: :created 
+            render :show 
         else
-            render json: { errors: @saved_recipe.errors.full_mesages }, status: :unprocessable_entity
+            # debugger
+            render json: { errors: @saved_recipe.errors.full_messages }, status: :unprocessable_entity
         end
     end
 

@@ -9,6 +9,8 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import './RecipeCarousel.css'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { GrBookmark } from 'react-icons/gr';
+import { useSelector, useDispatch } from "react-redux";
+import { saveRecipe, deleteSavedRecipe} from "../../store/savedRecipes";
 
 
 export default function RecipeCarousel({recipes}) {
@@ -19,6 +21,16 @@ export default function RecipeCarousel({recipes}) {
     const handleSlideChange = (newSlide) => {
         setCurrentSlide(newSlide);
     };
+
+    const dispatch = useDispatch();
+
+    const handleBookmarkClick = (saved, recipeId) => {
+        if (saved) {
+            dispatch(deleteSavedRecipe(recipeId));
+        } else {
+            dispatch(saveRecipe(recipeId));
+        }
+    }
 
     return (
         <div className="carousel-container">
@@ -44,7 +56,10 @@ export default function RecipeCarousel({recipes}) {
                             <h3 id="recipe-name">{recipe.name}</h3>
                             <p id="author-name">{recipe.author}</p>
                             <div id="cooking-time-bookmark">{recipe.cookingTime}
-                                {<GrBookmark id="slide-bookmark" />}  
+                                {<GrBookmark
+                                    id="slide-bookmark"
+                                    onClick={() => handleBookmarkClick(recipe.saved, recipe.id)}
+                                />}  
                             </div>
                         </div>
                     </div>

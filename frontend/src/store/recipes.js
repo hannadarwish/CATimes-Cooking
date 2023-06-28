@@ -1,3 +1,4 @@
+import { ADD_SAVED_RECIPE } from "./savedRecipes";
 
 // action constants
 export const RECEIVE_RECIPES = "recipes/RECEIVE_RECIPES";
@@ -27,6 +28,10 @@ export const getRecipes = (state) => (
     state.recipes ? Object.values(state.recipes) : []
 )
 
+export const getSavedRecipes = (state) => {
+    return state.savedRecipes ? Object.keys(state.savedRecipes) : [];
+};
+
 // thunk action creators
 export const fetchRecipes = () => async (dispatch) => {
     const response = await fetch('/api/recipes');
@@ -48,6 +53,17 @@ export const fetchRecipe = (recipeId) => async (dispatch) => {
     }
 }
 
+export const fetchSavedRecipes = () => async (dispatch) => {
+    const response = await fetch('/api/saved_recipes');
+
+    if (response.ok) {
+        const savedRecipes = await response.json();
+            dispatch(receiveRecipes(savedRecipes));
+    } else {
+        console.log('Failed to fetch saved recipes');
+    }
+};
+
 // Recipe Reducer
 
 export default function recipesReducer(state = {}, action) {
@@ -60,6 +76,10 @@ export default function recipesReducer(state = {}, action) {
             newState = {...state};
             const recipeId = action.recipe.id;
             newState[recipeId] = action.recipe;
+            return newState;
+        case ADD_SAVED_RECIPE:
+            newState = {...state};
+            newState[action.payload.recipe.id] = action.payload.recipe
             return newState;
         default:
             return state;

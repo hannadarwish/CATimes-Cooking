@@ -13,6 +13,8 @@ export default function RecipeShow() {
 
     const { recipeId } = useParams();
     const recipe = useSelector(getRecipe(recipeId));
+    console.log("HELLO")
+    console.log(recipe);
     const dispatch = useDispatch();
     const [showLoginModal, setShowLoginModal] = useState(false);
     const isLoggedIn = useSelector(state => state.session.user);
@@ -55,11 +57,23 @@ export default function RecipeShow() {
             <div className="ingredients-preparation-container">
                 <div id="ingredients">
                     <p id="ingredients-text">INGREDIENTS</p>
-                    {recipe.ingredients} 
+                    <ul>
+                        {JSON.parse(recipe.ingredients).map((ingredient, index) => (
+                            <li id="ingredients-list-items" key={index}>{ingredient}</li>
+                        ))}
+                    </ul> 
                 </div >
                 <div id="preparation"> 
                     <p id="preparation-text">PREPARATION</p>
-                    {recipe.preparation}
+                    <ol>
+                        {JSON.parse(recipe.preparation).map((step, index) => (
+                        <li className="steps-text" key={index}>
+                            <span id="step-text">Step {index + 1}:</span>
+                            <br/>
+                            {step}
+                        </li>
+                        ))}
+                    </ol>
                 </div>
             </div>
             <div className="ratings-notes-container">
@@ -80,19 +94,19 @@ export default function RecipeShow() {
             </div>
             <div className="newsletter-section-container">
                 <div id="left-side-newsletter">
-                    <h3>Get Our Newsletter</h3>
-                    <p>Get recipes, tips and CFT special offers delivered straight to your inbox. Opt out or contact us anytime. See our Privacy Policy.</p>
+                    {/* <h3>Get Our Newsletter</h3>
+                    <p>Get recipes, tips and CFT special offers delivered straight to your inbox. Opt out or contact us anytime. See our Privacy Policy.</p> */}
                 </div>
             </div>
             <div className="about-us-container">
                 <div id="about-us-text">
-                    <h3>About Us</h3>
+                    {/* <h3>About Us</h3>
                     <p>
                     CFT Cooking is a subscription service of The Chew Fork Times. It is a digital cookbook and cooking guide alike, available on all platforms, that helps home cooks of every level discover, save and organize the world’s best recipes, while also helping them become better, more competent cooks. Subscribe now for full access.
-                    </p>
+                    </p> */}
                 </div>
                 <div id="links-section">
-                    Links Section
+                    {/* Links Section */}
                 </div>
             </div>
         </div>

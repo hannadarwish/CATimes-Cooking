@@ -1,4 +1,5 @@
 import { ADD_SAVED_RECIPE } from "./savedRecipes";
+import { REMOVE_SAVED_RECIPE } from "./savedRecipes";
 
 // action constants
 export const RECEIVE_RECIPES = "recipes/RECEIVE_RECIPES";
@@ -80,6 +81,11 @@ export default function recipesReducer(state = {}, action) {
         case ADD_SAVED_RECIPE:
             newState = {...state};
             newState[action.payload.recipe.id] = action.payload.recipe
+            return newState;
+        case REMOVE_SAVED_RECIPE:
+            newState = {...state};
+            newState[action.recipeId].saved =  false
+            // is this wrong? 
             return newState;
         default:
             return state;

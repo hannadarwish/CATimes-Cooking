@@ -1,7 +1,8 @@
 
 json.recipe do
-    userIds = SavedRecipe.where(recipe_id: @saved_recipe.id).pluck(:user_id)
-    json.extract! @saved_recipe, :id
+    # userIds = SavedRecipe.where(recipe_id: @saved_recipe.id).pluck(:user_id)
+    # json.extract! @saved_recipe, :id
+    json.id @saved_recipe.recipe_id
 
     recipe = @saved_recipe.recipe
 
@@ -15,5 +16,5 @@ json.recipe do
     json.author recipe.author
     json.image_url recipe.image_url
 
-    json.saved userIds.include?(current_user.id) ? true : false
+    json.saved true
 end

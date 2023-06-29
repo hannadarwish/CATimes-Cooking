@@ -33,6 +33,8 @@ export default function RecipeShow() {
     if (!recipe) {
         return <div>{showLoginModal && <Modal onClose={() => setShowLoginModal(false)}><LoginForm /></Modal>}</div>; // Render a loading state while fetching the recipe
     }
+
+    console.log(JSON.parse(recipe.ingredients))
     
     return (
         <div className='recipe-show-container'>

@@ -2,7 +2,7 @@ class Api::SavedRecipesController < ApplicationController
 
     def index 
         # get saved recipes associated with current user
-        @saved_recipes = current_user.saved_recipes 
+        @recipes = current_user.recipes 
         render :index 
     end
 
@@ -20,7 +20,7 @@ class Api::SavedRecipesController < ApplicationController
 
     def destroy
         # find the saved recipe by the id and check if it belogns to current user
-        @saved_recipe = SavedRecipe.find_by(id: params[:id], user: current_user)
+        @saved_recipe = SavedRecipe.find_by(recipe_id: params[:id], user_id: current_user.id)
         if @saved_recipe
             @saved_recipe.destroy 
         else

@@ -50,7 +50,7 @@ export default function RecipeCarousel({recipes}) {
                     <Slide className="slide" index={index} key={index}>
                     <div className="slide-container">
                         <a href={`/recipes/${recipe.id}`}>
-                            <img id="slide-img" src={recipe.imageUrl}></img>
+                            <img className="slide-img" src={recipe.imageUrl}></img>
                         </a>
                         <div className="slide-content">
                             <h3 id="recipe-name">{recipe.name}</h3>

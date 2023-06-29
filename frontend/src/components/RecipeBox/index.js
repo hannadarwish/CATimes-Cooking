@@ -6,7 +6,8 @@ import { useEffect } from 'react';
 
 function RecipeBox() {
     
-    const recipes = useSelector(getRecipes)
+    const recipes = useSelector(getRecipes);
+    let numRecipes = recipes.length;
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -23,25 +24,31 @@ function RecipeBox() {
                 </div>
             </div>
             <div className="saved-recipes-container">
-                <h1>Saved Recipes</h1>
-                <h3 id="num-recipes">(number of recipes)</h3>
-                {recipes.map((recipe) => (
-                    <div className="slide-container">
-                        <a href={`/recipes/${recipe.id}`}>
-                            <img id="slide-img" src={recipe.imageUrl}></img>
-                        </a>
-                        <div className="slide-content">
-                            <h3 id="recipe-name">{recipe.name}</h3>
-                            <p id="author-name">{recipe.author}</p>
-                            <div id="cooking-time-bookmark">{recipe.cookingTime}
-                                {<GrBookmark id="slide-bookmark" />}  
+                <div className="title-container">
+                    <h1 id="saved-recipes-box-text">Saved Recipes</h1>
+                    <br/>
+                    <h3 id="num-recipes-box">{numRecipes} recipes</h3>
+                </div>
+                <div className="grid-container">
+                    {recipes.map((recipe) => (
+                        <div className="slide-container" key={recipe.id}>
+                            <a href={`/recipes/${recipe.id}`}>
+                                <img id="slide-img-recipe-box" src={recipe.imageUrl} alt={recipe.name} />
+                            </a>
+                            <div className="slide-content">
+                                <h3 id="recipe-name">{recipe.name}</h3>
+                                <p id="author-name">{recipe.author}</p>
+                                <div id="cooking-time-bookmark">
+                                    {recipe.cookingTime}
+                                    {<GrBookmark id="slide-bookmark" />}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default RecipeBox;

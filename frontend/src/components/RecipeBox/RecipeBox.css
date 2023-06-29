@@ -3,25 +3,66 @@
     margin-left: 25px;
     margin-right: 100px;
     margin-bottom: 100px;
-    margin-top: 70px;
+    margin-top: 100px;
     width: 100%;
     height: 100%;
-    display: flex;
     font-family: 'Libre Franklin', sans-serif;
     font-weight: lighter;
     color: #222;
+    display: flex;
+}
+
+.saved-recipes-container {
+    flex: 1;
+    display: grid;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .recipe-box-sidebar {
     width: 210px;
+    height: 100%;
     background-color: lightblue;
     border-right: 2px black;
+    flex-shrink: 0;
 }
 
 #saved-recipes-text {
     text-align: center;
 }
 
-/* .saved-recipes-container {
+#saved-recipes-box-text {
+    color: #222;
+    font-weight: 700;
+    font-size: 24px;
+}
 
-} */
+#num-recipes-box {
+    color: #666;
+}
+
+.slide-container {
+    width: 230px;
+    height: 180px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column; /* Adjust to stack elements vertically */
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* Use auto-fit to adjust the number of columns */
+    gap: 10px;
+}
+
+
+#slide-img-recipe-box {
+    height: 157px;
+    width: 100%;
+    object-fit: cover;
+}

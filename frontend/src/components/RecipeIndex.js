@@ -7,7 +7,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import RecipeCarousel from "./RecipeCarousel/RecipeCarousel";
-import MoreFromOurEditors from "./MoreFromOurEditors";
+import MoreFromOurEditors from "./MoreFromOurEditors/MoreFromOurEditors";
 import { fetchRecipes, getRecipes } from "../store/recipes";
 import './RecipeIndex.css'
 

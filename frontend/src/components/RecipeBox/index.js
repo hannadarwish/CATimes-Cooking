@@ -4,12 +4,14 @@ import { GoBookmark, GoBookmarkFill } from 'react-icons/go';
 import { getRecipes,fetchSavedRecipes } from '../../store/recipes';
 import { useEffect } from 'react';
 import { deleteSavedRecipe, saveRecipe } from '../../store/savedRecipes';
-import { useState } from 'react';
+import CategorySidebar from '../CategorySidebar';
 
 function RecipeBox() {
     
     const recipes = useSelector(getRecipes);
-    let numRecipes = recipes.length;
+    const savedRecipes = recipes.filter((recipe) => recipe.saved === true);
+
+    let numRecipes = savedRecipes.length;
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -37,7 +39,7 @@ function RecipeBox() {
                 </div>
                 <div id="recipe-box-sidebar-categories">
                     <h3 id="by-category-text">BY CATEGORY</h3>
-                    Categories and Images
+                    <CategorySidebar />
                 </div>
             </div>
             <div className="saved-recipes-container">
@@ -47,7 +49,7 @@ function RecipeBox() {
                     <h3 id="num-recipes-box">{numRecipes} recipes</h3>
                 </div>
                 <div className="grid-container">
-                    {recipes.map((recipe) => (
+                    {savedRecipes.map((recipe) => (
                         <div className="slide-container" key={recipe.id}>
                             <a href={`/recipes/${recipe.id}`}>
                                 <img id="slide-img-recipe-box" src={recipe.imageUrl} alt={recipe.name} />

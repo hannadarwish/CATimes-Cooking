@@ -1,5 +1,5 @@
 import './RecipeOfTheDay.css';
-import { GrBookmark } from 'react-icons/gr';
+import { GoBookmark, GoBookmarkFill } from 'react-icons/go';
 import { saveRecipe, deleteSavedRecipe } from '../../store/savedRecipes';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -16,6 +16,10 @@ function RecipeOfTheDay() {
         } else {
             dispatch(saveRecipe(recipeId));
         }
+    };
+
+    const toggleBookmarkIcon = (saved) => {
+        return saved ? <GoBookmarkFill id="slide-bookmark" /> : <GoBookmark id="slide-bookmark" />;
     };
 
     return (
@@ -43,9 +47,7 @@ function RecipeOfTheDay() {
             <div className="rotd-buttons">
                 <button id="save-to-recipe-box-button" onClick={handleBookmarkClick}>
                     <div id="bookmark">
-                        {<GrBookmark
-                            id="slide-bookmark"
-                        />}
+                    {toggleBookmarkIcon(isRecipeSaved)}
                     </div>
                     <span id="save-to-recipe-box-text"> Save to Recipe Box</span>
                 </button>

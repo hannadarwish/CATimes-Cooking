@@ -1,8 +1,10 @@
 import './RecipeBox.css'
 import { useSelector, useDispatch } from 'react-redux';
-import { GrBookmark } from 'react-icons/gr';
+import { GoBookmark, GoBookmarkFill } from 'react-icons/go';
 import { getRecipes,fetchSavedRecipes } from '../../store/recipes';
 import { useEffect } from 'react';
+import { deleteSavedRecipe, saveRecipe } from '../../store/savedRecipes';
+import { useState } from 'react';
 
 function RecipeBox() {
     
@@ -14,12 +16,27 @@ function RecipeBox() {
         dispatch(fetchSavedRecipes());
     }, [dispatch]);
 
+    const handleBookmarkClick = (saved, recipeId) => {
+        if (saved) {
+            dispatch(deleteSavedRecipe(recipeId))
+            .then(() => dispatch(fetchSavedRecipes()))
+        } else {
+            dispatch(saveRecipe(recipeId));
+        }
+    }
+
+    const toggleBookmarkIcon = (saved) => {
+        return saved ? <GoBookmarkFill id="slide-bookmark" /> : <GoBookmark id="slide-bookmark" />;
+    };
+
     return (
         <div className="recipe-box-container">
             <div className="recipe-box-sidebar">
-                <h3 id="saved-recipes-text">Saved Recipes</h3>
+                <div id="sidebar-saved-recipes-text-container">
+                    <h3 id="saved-recipes-text"> <GoBookmarkFill/> Saved Recipes</h3>
+                </div>
                 <div id="recipe-box-sidebar-categories">
-                    <h3>By Category</h3>
+                    <h3 id="by-category-text">BY CATEGORY</h3>
                     Categories and Images
                 </div>
             </div>
@@ -38,9 +55,9 @@ function RecipeBox() {
                             <div className="slide-content">
                                 <h3 id="recipe-name">{recipe.name}</h3>
                                 <p id="author-name">{recipe.author}</p>
-                                <div id="cooking-time-bookmark">
+                                <div id="cooking-time-bookmark" onClick={() => handleBookmarkClick(recipe.saved, recipe.id)}>
                                     {recipe.cookingTime}
-                                    {<GrBookmark id="slide-bookmark" />}
+                                    {toggleBookmarkIcon(recipe.saved)}
                                 </div>
                             </div>
                         </div>

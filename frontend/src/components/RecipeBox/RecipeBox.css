@@ -22,19 +22,37 @@
 .recipe-box-sidebar {
     width: 210px;
     height: 100%;
-    background-color: lightblue;
+    background-color: #fff;
     border-right: 2px black;
     flex-shrink: 0;
 }
 
+#sidebar-saved-recipes-text-container {
+    background-color: #f7f7f5;
+    padding: 20px;
+}
+
 #saved-recipes-text {
     text-align: center;
+    font-weight: bold;
+    color: #222;
+    display: block;
+    letter-spacing: .3px;
+
 }
 
 #saved-recipes-box-text {
     color: #222;
     font-weight: 700;
     font-size: 24px;
+}
+
+#by-category-text {
+    color:#767676;
+    font-size: 12px;
+    font-weight: lighter;
+    letter-spacing: .93px;
+    padding: 15px;
 }
 
 #num-recipes-box {

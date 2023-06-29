@@ -8,7 +8,7 @@ import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-re
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import './RecipeCarousel.css'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { GrBookmark } from 'react-icons/gr';
+import { GoBookmark, GoBookmarkFill } from 'react-icons/go';
 import { useDispatch } from "react-redux";
 import { saveRecipe, deleteSavedRecipe} from "../../store/savedRecipes";
 
@@ -32,6 +32,10 @@ export default function RecipeCarousel({recipes}) {
         }
     }
 
+    const toggleBookmarkIcon = (saved) => {
+        return saved ? <GoBookmarkFill id="slide-bookmark" /> : <GoBookmark id="slide-bookmark" />;
+    };
+
     return (
         <div className="carousel-container">
 
@@ -52,14 +56,14 @@ export default function RecipeCarousel({recipes}) {
                         <a href={`/recipes/${recipe.id}`}>
                             <img className="slide-img" src={recipe.imageUrl}></img>
                         </a>
-                        <div className="slide-content">
-                            <h3 id="recipe-name">{recipe.name}</h3>
-                            <p id="author-name">{recipe.author}</p>
-                            <div id="cooking-time-bookmark">{recipe.cookingTime}
-                                {<GrBookmark
-                                    id="slide-bookmark"
-                                    onClick={() => handleBookmarkClick(recipe.saved, recipe.id)}
-                                />}  
+                            <div className="slide-content">
+                                <h3 id="recipe-name">{recipe.name}</h3>
+                                <p id="author-name">{recipe.author}</p>
+                            <div id="cooking-time-bookmark">
+                                {recipe.cookingTime}
+                                <div className="bookmark-icon" onClick={() => handleBookmarkClick(recipe.saved, recipe.id)}>
+                                    {toggleBookmarkIcon(recipe.saved)}
+                                </div>
                             </div>
                         </div>
                     </div>

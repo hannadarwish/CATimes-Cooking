@@ -84,8 +84,7 @@ export default function recipesReducer(state = {}, action) {
             return newState;
         case REMOVE_SAVED_RECIPE:
             newState = {...state};
-            newState[action.recipeId].saved =  false
-            // is this wrong? 
+            newState[action.recipeId].saved = false 
             return newState;
         default:
             return state;

@@ -9,7 +9,7 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import './RecipeCarousel.css'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { GrBookmark } from 'react-icons/gr';
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { saveRecipe, deleteSavedRecipe} from "../../store/savedRecipes";
 
 

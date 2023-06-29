@@ -1,7 +1,22 @@
 import './RecipeOfTheDay.css';
 import { GrBookmark } from 'react-icons/gr';
+import { saveRecipe, deleteSavedRecipe } from '../../store/savedRecipes';
+import { useDispatch, useSelector } from 'react-redux';
 
 function RecipeOfTheDay() {
+
+    const dispatch = useDispatch();
+    const recipeId = 13;
+
+    const isRecipeSaved = useSelector((state) => state.recipes[13]?.saved);
+
+    const handleBookmarkClick = () => {
+        if (isRecipeSaved) {
+            dispatch(deleteSavedRecipe(recipeId));
+        } else {
+            dispatch(saveRecipe(recipeId));
+        }
+    };
 
     return (
         <div className="recipe-of-the-day-container">
@@ -26,8 +41,12 @@ function RecipeOfTheDay() {
                 </div>
             </div>
             <div className="rotd-buttons">
-                <button id="save-to-recipe-box-button">
-                    <div id="bookmark">{<GrBookmark color="white" />}</div>
+                <button id="save-to-recipe-box-button" onClick={handleBookmarkClick}>
+                    <div id="bookmark">
+                        {<GrBookmark
+                            id="slide-bookmark"
+                        />}
+                    </div>
                     <span id="save-to-recipe-box-text"> Save to Recipe Box</span>
                 </button>
             </div>

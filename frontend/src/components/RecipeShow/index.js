@@ -34,9 +34,7 @@ export default function RecipeShow() {
     if (!recipe) {
         return <div>{showLoginModal && <Modal onClose={() => setShowLoginModal(false)}><LoginForm /></Modal>}</div>; // Render a loading state while fetching the recipe
     }
-
-    console.log(JSON.parse(recipe.ingredients))
-    
+    debugger
     return (
         <>
         { recipe ? 
@@ -64,7 +62,7 @@ export default function RecipeShow() {
                     <div id="ingredients">
                         <p id="ingredients-text">INGREDIENTS</p>
                         <ul>
-                            {JSON.parse(recipe.ingredients).map((ingredient, index) => (
+                            {JSON.parse(recipe.ingredients).result.map((ingredient, index) => (
                                 <li id="ingredients-list-items" key={index}>{ingredient}</li>
                             ))}
                         </ul> 
@@ -72,7 +70,7 @@ export default function RecipeShow() {
                     <div id="preparation"> 
                         <p id="preparation-text">PREPARATION</p>
                         <ol>
-                            {JSON.parse(recipe.preparation).map((step, index) => (
+                            {JSON.parse(recipe.preparation).result.map((step, index) => (
                             <li className="steps-text" key={index}>
                                 <span id="step-text">Step {index + 1}:</span>
                                 <br/>

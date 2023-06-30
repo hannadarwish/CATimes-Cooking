@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 export default function CategorySidebar() {
 
     const recipes = useSelector(getRecipes);
+    const savedRecipes = recipes.filter((recipe) => recipe.saved === true);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -26,7 +27,7 @@ export default function CategorySidebar() {
         <div className="category-sidebar-item-container">
             <ul>
                 {categories.map((category) => {
-                    const filteredRecipes = recipes.filter((recipe) => recipe.mealCategory === category.filter);
+                    const filteredRecipes = savedRecipes.filter((recipe) => recipe.mealCategory === category.filter);
                     const numRecipes = filteredRecipes.length;
                     const imageUrl = filteredRecipes[0]?.imageUrl;
 

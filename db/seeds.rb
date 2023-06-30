@@ -307,115 +307,115 @@ ApplicationRecord.transaction do
       image_url: "https://cft-cooking-seeds.s3.us-west-1.amazonaws.com/aws-fullstack-images/pasta-salad.jpeg"
     )
 
-      Recipe.create!(
-      name: "Pasta Amatriciana",
-      cooking_time: "25 minutes",
-      description: "Pasta amatriciana is a traditional Italian dish that features a sauce of guanciale (salt-cured pork jowl), tomato, pecorino romano and chiles. Some variations include onion and white wine. The final product tastes much more complex than the ingredient list would suggest: This simple pantry meal delivers deep flavors, as the bright, tangy tomato base balances the rich pork, and a mix of dried peppers adds layers of subtle heat. Guanciale can be found in Italian specialty shops or online, but pancetta is a good alternative. Bucatini is a thicker pasta with a hollow center that captures the thick sauce, but spaghetti delivers equally tasty results.",
-      ingredients: ["Yield: 4 servings", "2 tablespoons extra-virgin olive oil", "4 ounces guanciale or pancetta, chopped into ¼-inch cubes (¾ cup)",
-    "1 (28-ounce) can whole tomatoes, crushed with your hands in a bowl", "⅛ teaspoon black pepper, plus more to taste",
-  "⅛ teaspoon red-pepper flakes", "Kosher salt (such as Diamond Crystal)", "1 pound dried bucatini",
-"¾ cup grated Pecorino Romano, plus more for garnish"],
-      preparation: ["In a large (12-inch) skillet, heat olive oil over medium. Add guanciale and cook, stirring occasionally, until golden, about 5 minutes. To the skillet, add tomatoes, black pepper and red-pepper flakes, and season with salt. Cook, stirring occasionally and smashing tomatoes with the back of a wooden spoon, until tomatoes have broken down and sauce is thickened, about 15 minutes.",
-    "Meanwhile, in a large pot of salted water, cook pasta according to package directions until just shy of al dente. Reserve 1 cup of the pasta cooking water and drain.", 
-    "Add pasta, tomato sauce and ½ cup of pasta cooking water back to the large pasta pot and stir vigorously over medium-high heat until pasta is evenly coated in the sauce, about 1 minute. (Add more pasta water if sauce is dry.) Remove from heat, stir in the cheese and season to taste with salt.",
-  "Divide pasta among bowls and garnish with more cheese and black pepper."],
-      meal_category: "Dinner",
-      org_category: "Quick Pastas",
-      author: "Kay Chun",
-      image_url: "https://cft-cooking-seeds.s3.us-west-1.amazonaws.com/aws-fullstack-images/amitriciana.jpeg"
-    )
+#       Recipe.create!(
+#       name: "Pasta Amatriciana",
+#       cooking_time: "25 minutes",
+#       description: "Pasta amatriciana is a traditional Italian dish that features a sauce of guanciale (salt-cured pork jowl), tomato, pecorino romano and chiles. Some variations include onion and white wine. The final product tastes much more complex than the ingredient list would suggest: This simple pantry meal delivers deep flavors, as the bright, tangy tomato base balances the rich pork, and a mix of dried peppers adds layers of subtle heat. Guanciale can be found in Italian specialty shops or online, but pancetta is a good alternative. Bucatini is a thicker pasta with a hollow center that captures the thick sauce, but spaghetti delivers equally tasty results.",
+#       ingredients: ["Yield: 4 servings", "2 tablespoons extra-virgin olive oil", "4 ounces guanciale or pancetta, chopped into ¼-inch cubes (¾ cup)",
+#     "1 (28-ounce) can whole tomatoes, crushed with your hands in a bowl", "⅛ teaspoon black pepper, plus more to taste",
+#   "⅛ teaspoon red-pepper flakes", "Kosher salt (such as Diamond Crystal)", "1 pound dried bucatini",
+# "¾ cup grated Pecorino Romano, plus more for garnish"],
+#       preparation: ["In a large (12-inch) skillet, heat olive oil over medium. Add guanciale and cook, stirring occasionally, until golden, about 5 minutes. To the skillet, add tomatoes, black pepper and red-pepper flakes, and season with salt. Cook, stirring occasionally and smashing tomatoes with the back of a wooden spoon, until tomatoes have broken down and sauce is thickened, about 15 minutes.",
+#     "Meanwhile, in a large pot of salted water, cook pasta according to package directions until just shy of al dente. Reserve 1 cup of the pasta cooking water and drain.", 
+#     "Add pasta, tomato sauce and ½ cup of pasta cooking water back to the large pasta pot and stir vigorously over medium-high heat until pasta is evenly coated in the sauce, about 1 minute. (Add more pasta water if sauce is dry.) Remove from heat, stir in the cheese and season to taste with salt.",
+#   "Divide pasta among bowls and garnish with more cheese and black pepper."],
+#       meal_category: "Dinner",
+#       org_category: "Quick Pastas",
+#       author: "Kay Chun",
+#       image_url: "https://cft-cooking-seeds.s3.us-west-1.amazonaws.com/aws-fullstack-images/amitriciana.jpeg"
+#     )
 
-    Recipe.create!(
-      name: "Kale Sauce Pasta",
-      cooking_time: "20 minutes",
-      description: "This recipe for a vivid, vegetarian pasta sauce, made from blanched kale leaves and loaded with good olive oil and grated cheese, comes from Joshua McFadden, the chef at Ava Gene’s in Portland, Ore., and was inspired by Rose Gray and Ruth Rogers of The River Café in London. The technique is absurdly simple and quick from start to finish, but the result is luxurious and near-creamy. Feel free to play with the pasta shape, but no matter what you choose, be sure to let the blender run for a while at a powerful setting: You want the kale to completely break down into a smooth, bright, airy green puree. —Tejal Rao",
-      ingredients: ["2 servings as a main course or 4 as a side", "Kosher salt (such as Diamond Crystal)",
-    "¼ cup extra-virgin olive oil, plus more for serving", "2 garlic cloves, smashed flat and peeled",
-  "1 pound lacinato kale, thick ribs removed", "Freshly ground black pepper", "½ pound pasta, like pappardelle or rigatoni", "¾ cup coarsely grated Parmigiano- Reggiano"],
-      preparation: ["Put a large pot of generously salted water over high heat, and bring to a boil. In a small skillet over medium heat, add olive oil and garlic, and cook until the garlic begins to sizzle. Reduce heat to low, and cook very gently until garlic is soft and begins to turn light gold, about 5 minutes. Remove from heat.", 
-      "When water is boiling, add kale leaves, and cook until tender, but not mushy, about 5 minutes. Pull out the hot, dripping kale leaves with tongs, and put directly into a blender. (Don’t drain the pot; you’ll use that same boiling water to cook the pasta.) Add garlic and its oil to the blender, along with a splash of hot water from the pot if you need some more liquid to get the blender going. Blend into a fine, thick green purée. Taste, and adjust seasoning with salt and pepper, then blend again.",
-    "Add the pasta to the still-boiling water, and cook according to directions on the package. Ladle out about a cup of the water to save for finishing the dish, then drain the pasta and return it to the dry pot. Add the kale purée, about ¾ of the grated cheese and a splash of the reserved pasta water. Toss until all the pasta is well coated and bright green, adding another splash of pasta water if needed so that the sauce is loose and almost creamy in texture. Serve in bowls right away, and top with an extra drizzle of olive oil and the rest of the grated cheese."],
-      meal_category: "Sides",
-      org_category: "Quick Pastas",
-      author: "Joshua McFadden",
-      image_url: "https://cft-cooking-seeds.s3.us-west-1.amazonaws.com/aws-fullstack-images/kale-pasta.jpeg"
-    )
+#     Recipe.create!(
+#       name: "Kale Sauce Pasta",
+#       cooking_time: "20 minutes",
+#       description: "This recipe for a vivid, vegetarian pasta sauce, made from blanched kale leaves and loaded with good olive oil and grated cheese, comes from Joshua McFadden, the chef at Ava Gene’s in Portland, Ore., and was inspired by Rose Gray and Ruth Rogers of The River Café in London. The technique is absurdly simple and quick from start to finish, but the result is luxurious and near-creamy. Feel free to play with the pasta shape, but no matter what you choose, be sure to let the blender run for a while at a powerful setting: You want the kale to completely break down into a smooth, bright, airy green puree. —Tejal Rao",
+#       ingredients: ["2 servings as a main course or 4 as a side", "Kosher salt (such as Diamond Crystal)",
+#     "¼ cup extra-virgin olive oil, plus more for serving", "2 garlic cloves, smashed flat and peeled",
+#   "1 pound lacinato kale, thick ribs removed", "Freshly ground black pepper", "½ pound pasta, like pappardelle or rigatoni", "¾ cup coarsely grated Parmigiano- Reggiano"],
+#       preparation: ["Put a large pot of generously salted water over high heat, and bring to a boil. In a small skillet over medium heat, add olive oil and garlic, and cook until the garlic begins to sizzle. Reduce heat to low, and cook very gently until garlic is soft and begins to turn light gold, about 5 minutes. Remove from heat.", 
+#       "When water is boiling, add kale leaves, and cook until tender, but not mushy, about 5 minutes. Pull out the hot, dripping kale leaves with tongs, and put directly into a blender. (Don’t drain the pot; you’ll use that same boiling water to cook the pasta.) Add garlic and its oil to the blender, along with a splash of hot water from the pot if you need some more liquid to get the blender going. Blend into a fine, thick green purée. Taste, and adjust seasoning with salt and pepper, then blend again.",
+#     "Add the pasta to the still-boiling water, and cook according to directions on the package. Ladle out about a cup of the water to save for finishing the dish, then drain the pasta and return it to the dry pot. Add the kale purée, about ¾ of the grated cheese and a splash of the reserved pasta water. Toss until all the pasta is well coated and bright green, adding another splash of pasta water if needed so that the sauce is loose and almost creamy in texture. Serve in bowls right away, and top with an extra drizzle of olive oil and the rest of the grated cheese."],
+#       meal_category: "Sides",
+#       org_category: "Quick Pastas",
+#       author: "Joshua McFadden",
+#       image_url: "https://cft-cooking-seeds.s3.us-west-1.amazonaws.com/aws-fullstack-images/kale-pasta.jpeg"
+#     )
 
-    Recipe.create!(
-      name: "Creamy Chive Pasta With Lemon",
-      cooking_time: "25 minutes",
-      description: "This recipe is a good way to showcase any fresh chives you may have. In the spirit of buttered noodles with chives — or stir-fried lo mein with Chinese chives — this recipe uses the delicate alliums as an ingredient instead of a garnish. Their gentle onion flavor adds freshness to lemon-cream sauce, which is not unlike a delicate sour cream and onion dip. You can use crème fraîche for more tang, heavy cream for an Alfredo vibe, or ricotta for a hint of sweetness. To use another spring allium like ramps, leeks or a combination, thinly slice and simmer in heavy cream (not crème fraîche or ricotta) to soften before adding the other ingredients.",
-      ingredients: ["Yield: 4 servings", "Kosher salt and black pepper", "1 pound long noodles, like linguine or spaghetti",
-    "¾ cup crème fraîche, heavy cream or ricotta", "¾ cup freshly grated Parmesan (1¾ ounces), plus more for serving",
-  "1 tablespoon fresh lemon zest plus 3 tablespoons lemon juice (from 1 to 2 lemons)",
-"¼ to 1½ ounces chives, cut into 1-inch pieces"],
-      preparation: ["Bring a large pot of salted water to a boil. Add the pasta and cook according to package instructions until al dente. Reserve 1 cup pasta cooking water, then drain the pasta.",
-    "In the same pot, make the sauce: Stir together the crème fraîche, ½ cup reserved pasta water, Parmesan, lemon zest and juice, and a pinch of salt and pepper. Add the pasta, return to medium heat, and cook, tossing vigorously, until the noodles are well coated, 1 to 2 minutes. Add more pasta water as needed to gloss the noodles.",
-  "Add the chives and stir until evenly distributed and slightly wilted. Season to taste with salt and pepper. Eat with more grated Parmesan and black pepper on top."],
-      meal_category: "Lunch",
-      org_category: "Quick Pastas",
-      author: "Ali Slagle",
-      image_url: "https://cft-cooking-seeds.s3.us-west-1.amazonaws.com/aws-fullstack-images/chive-lemon-pasta.jpeg"
-    )
+#     Recipe.create!(
+#       name: "Creamy Chive Pasta With Lemon",
+#       cooking_time: "25 minutes",
+#       description: "This recipe is a good way to showcase any fresh chives you may have. In the spirit of buttered noodles with chives — or stir-fried lo mein with Chinese chives — this recipe uses the delicate alliums as an ingredient instead of a garnish. Their gentle onion flavor adds freshness to lemon-cream sauce, which is not unlike a delicate sour cream and onion dip. You can use crème fraîche for more tang, heavy cream for an Alfredo vibe, or ricotta for a hint of sweetness. To use another spring allium like ramps, leeks or a combination, thinly slice and simmer in heavy cream (not crème fraîche or ricotta) to soften before adding the other ingredients.",
+#       ingredients: ["Yield: 4 servings", "Kosher salt and black pepper", "1 pound long noodles, like linguine or spaghetti",
+#     "¾ cup crème fraîche, heavy cream or ricotta", "¾ cup freshly grated Parmesan (1¾ ounces), plus more for serving",
+#   "1 tablespoon fresh lemon zest plus 3 tablespoons lemon juice (from 1 to 2 lemons)",
+# "¼ to 1½ ounces chives, cut into 1-inch pieces"],
+#       preparation: ["Bring a large pot of salted water to a boil. Add the pasta and cook according to package instructions until al dente. Reserve 1 cup pasta cooking water, then drain the pasta.",
+#     "In the same pot, make the sauce: Stir together the crème fraîche, ½ cup reserved pasta water, Parmesan, lemon zest and juice, and a pinch of salt and pepper. Add the pasta, return to medium heat, and cook, tossing vigorously, until the noodles are well coated, 1 to 2 minutes. Add more pasta water as needed to gloss the noodles.",
+#   "Add the chives and stir until evenly distributed and slightly wilted. Season to taste with salt and pepper. Eat with more grated Parmesan and black pepper on top."],
+#       meal_category: "Lunch",
+#       org_category: "Quick Pastas",
+#       author: "Ali Slagle",
+#       image_url: "https://cft-cooking-seeds.s3.us-west-1.amazonaws.com/aws-fullstack-images/chive-lemon-pasta.jpeg"
+#     )
 
-    Recipe.create!(
-      name: "One-Pot Pasta With Sausage and Spinach",
-      cooking_time: "20 minutes",
-      description: "This is the one-pot recipe to make when chopping an onion feels like too much work. Cooking the pasta in a combination of passata (puréed raw tomatoes) and water seasoned with cumin and red-pepper flakes infuses it with flavor all the way through. Cumin adds a subtle earthiness to the dish, but you can also use the same seasonings as those in the sausage you’ve chosen, like dried oregano, thyme, basil, paprika, fennel seeds or garlic. (Check the ingredients list on the package, if you're not sure.) Baby arugula, kale or other leafy greens could be substituted for the spinach, just make sure to tear or cut them into small, bite-size pieces. To make a vegetarian version, you could use mushrooms in place of the sausage at the start of the recipe, then continue with the rest.",
-      ingredients: ["Yield: 4 servings", "1 tablespoon olive oil", "2 sweet or hot Italian sausages (5 to 6 ounces), casings removed",
-    "1 (24-ounce) jar passata or (28-ounce) can crushed tomatoes",
-  "½ teaspoon ground cumin", "½ teaspoon red-pepper flakes", "Kosher salt",
-"1 pound cavatappi, fusilli or other small, tubular pasta", "5 packed cups baby spinach (about 5 ounces)",
-"½ cup grated Parmesan"],
-      preparation: ["Heat the oil in a 12-inch, deep skillet with a tight-fitting lid or a Dutch oven over medium-high until shimmering. Use your hands to pull the sausages apart into small pieces; add to the skillet and cook untouched for 1 minute.",
-    "Continue to cook for another 4 to 6 minutes, stirring at 1-minute intervals and breaking up the sausage into ½-inch chunks, until browned and crispy on the outside with no pink remaining. If you have more than 1 tablespoon of fat in the pan, drain the excess.",
-  "Carefully pour in the passata (it may splatter), then add the cumin, red-pepper flakes and 2 cups water, stirring to combine. Season with salt and increase the heat to bring to a boil.",
-"Add the pasta, coating it with the liquid. (It won’t be fully submerged, and that’s OK.) Adjust the heat to maintain an active simmer with small bubbles forming on the surface. Cover and let cook, stirring every few minutes to make sure nothing is sticking at the bottom of the pan, until the pasta is al dente, about 1 minute less than the package instructions. If the pasta is still hard at this point, add a few tablespoons of warm water at a time and cook until just al dente. Depending on your pasta size and shape, you may need to add several tablespoons of water.",
-"When the pasta is just al dente, reduce the heat to low and season to taste with salt. Stir in the spinach in batches, and cook, uncovered, until most of the spinach is wilted, about 1 minute more. (It will continue to wilt in the heat of the pasta after you serve it.) If the pasta seems too dry, add 1 tablespoon warm water at a time until it reaches your desired consistency.",
-"Divide pasta among serving bowls and top with Parmesan."],
-      meal_category: "Dinner",
-      org_category: "Quick Pastas",
-      author: "Yasmin Fahr",
-      image_url: "https://cft-cooking-seeds.s3.us-west-1.amazonaws.com/aws-fullstack-images/one-pot-sausage-spinach.jpeg"
-    )
+#     Recipe.create!(
+#       name: "One-Pot Pasta With Sausage and Spinach",
+#       cooking_time: "20 minutes",
+#       description: "This is the one-pot recipe to make when chopping an onion feels like too much work. Cooking the pasta in a combination of passata (puréed raw tomatoes) and water seasoned with cumin and red-pepper flakes infuses it with flavor all the way through. Cumin adds a subtle earthiness to the dish, but you can also use the same seasonings as those in the sausage you’ve chosen, like dried oregano, thyme, basil, paprika, fennel seeds or garlic. (Check the ingredients list on the package, if you're not sure.) Baby arugula, kale or other leafy greens could be substituted for the spinach, just make sure to tear or cut them into small, bite-size pieces. To make a vegetarian version, you could use mushrooms in place of the sausage at the start of the recipe, then continue with the rest.",
+#       ingredients: ["Yield: 4 servings", "1 tablespoon olive oil", "2 sweet or hot Italian sausages (5 to 6 ounces), casings removed",
+#     "1 (24-ounce) jar passata or (28-ounce) can crushed tomatoes",
+#   "½ teaspoon ground cumin", "½ teaspoon red-pepper flakes", "Kosher salt",
+# "1 pound cavatappi, fusilli or other small, tubular pasta", "5 packed cups baby spinach (about 5 ounces)",
+# "½ cup grated Parmesan"],
+#       preparation: ["Heat the oil in a 12-inch, deep skillet with a tight-fitting lid or a Dutch oven over medium-high until shimmering. Use your hands to pull the sausages apart into small pieces; add to the skillet and cook untouched for 1 minute.",
+#     "Continue to cook for another 4 to 6 minutes, stirring at 1-minute intervals and breaking up the sausage into ½-inch chunks, until browned and crispy on the outside with no pink remaining. If you have more than 1 tablespoon of fat in the pan, drain the excess.",
+#   "Carefully pour in the passata (it may splatter), then add the cumin, red-pepper flakes and 2 cups water, stirring to combine. Season with salt and increase the heat to bring to a boil.",
+# "Add the pasta, coating it with the liquid. (It won’t be fully submerged, and that’s OK.) Adjust the heat to maintain an active simmer with small bubbles forming on the surface. Cover and let cook, stirring every few minutes to make sure nothing is sticking at the bottom of the pan, until the pasta is al dente, about 1 minute less than the package instructions. If the pasta is still hard at this point, add a few tablespoons of warm water at a time and cook until just al dente. Depending on your pasta size and shape, you may need to add several tablespoons of water.",
+# "When the pasta is just al dente, reduce the heat to low and season to taste with salt. Stir in the spinach in batches, and cook, uncovered, until most of the spinach is wilted, about 1 minute more. (It will continue to wilt in the heat of the pasta after you serve it.) If the pasta seems too dry, add 1 tablespoon warm water at a time until it reaches your desired consistency.",
+# "Divide pasta among serving bowls and top with Parmesan."],
+#       meal_category: "Dinner",
+#       org_category: "Quick Pastas",
+#       author: "Yasmin Fahr",
+#       image_url: "https://cft-cooking-seeds.s3.us-west-1.amazonaws.com/aws-fullstack-images/one-pot-sausage-spinach.jpeg"
+#     )
 
-    Recipe.create!(
-      name: "Spaghetti With Burrata and Garlic-Chile Oil",
-      cooking_time: "20 minutes",
-      description: "Burrata — a cousin of mozzarella with a creamy core — is a splurge, but it does all the heavy lifting in this simple dish, adding a rich finish that renders a basic bowl of whole-wheat noodles sophisticated. A spicy-sweet seasoned oil made by sautéing fennel, garlic and red-pepper flakes in good-quality olive oil over low heat is drizzled over the top, complementing the velvety texture of the cheese and the nuttiness of the noodles.",
-      ingredients: ["Yield: 4 to 6 servings", "Kosher salt", "1 teaspoon fennel seeds",
-    "¾ cup extra-virgin olive oil", "1 large head fennel (about 8 ounces), trimmed, cored and thinly sliced",
-  "10 garlic cloves, thinly sliced lengthwise", "¾ teaspoon red-pepper flakes",
-"1 pound whole-wheat spaghetti", "8 ounces burrata cheese", "1 teaspoon flaky sea salt, such as Maldon",
-"Black pepper"],
-      preparation: ["Bring a large pot of generously salted water to a boil. Crack the fennel seeds with the flat side of a large knife or the backside of a heavy skillet. Heat the oil, sliced fennel, garlic, fennel seeds and red-pepper flakes in a large skillet over low. Cook, stirring occasionally, until the garlic and fennel are softened and the oil is deeply flavored, 12 to 15 minutes.",
-    "Meanwhile, cook the pasta according to package directions until al dente. Drain and return pasta to pot. Reserve a few tablespoons of the seasoned oil and fennel mixture, then add the rest to the pot with the pasta and toss to coat.",
-  "Divide the pasta and burrata among four shallow bowls. Spoon the remaining seasoned oil and fennel mixture over the top and season with flaky salt and black pepper to taste."],
-      meal_category: "Lunch",
-      org_category: "Quick Pastas",
-      author: "Sarah Copeland",
-      image_url: "https://cft-cooking-seeds.s3.us-west-1.amazonaws.com/aws-fullstack-images/spaghetti-garlic-burrata.jpeg"
-    )
+#     Recipe.create!(
+#       name: "Spaghetti With Burrata and Garlic-Chile Oil",
+#       cooking_time: "20 minutes",
+#       description: "Burrata — a cousin of mozzarella with a creamy core — is a splurge, but it does all the heavy lifting in this simple dish, adding a rich finish that renders a basic bowl of whole-wheat noodles sophisticated. A spicy-sweet seasoned oil made by sautéing fennel, garlic and red-pepper flakes in good-quality olive oil over low heat is drizzled over the top, complementing the velvety texture of the cheese and the nuttiness of the noodles.",
+#       ingredients: ["Yield: 4 to 6 servings", "Kosher salt", "1 teaspoon fennel seeds",
+#     "¾ cup extra-virgin olive oil", "1 large head fennel (about 8 ounces), trimmed, cored and thinly sliced",
+#   "10 garlic cloves, thinly sliced lengthwise", "¾ teaspoon red-pepper flakes",
+# "1 pound whole-wheat spaghetti", "8 ounces burrata cheese", "1 teaspoon flaky sea salt, such as Maldon",
+# "Black pepper"],
+#       preparation: ["Bring a large pot of generously salted water to a boil. Crack the fennel seeds with the flat side of a large knife or the backside of a heavy skillet. Heat the oil, sliced fennel, garlic, fennel seeds and red-pepper flakes in a large skillet over low. Cook, stirring occasionally, until the garlic and fennel are softened and the oil is deeply flavored, 12 to 15 minutes.",
+#     "Meanwhile, cook the pasta according to package directions until al dente. Drain and return pasta to pot. Reserve a few tablespoons of the seasoned oil and fennel mixture, then add the rest to the pot with the pasta and toss to coat.",
+#   "Divide the pasta and burrata among four shallow bowls. Spoon the remaining seasoned oil and fennel mixture over the top and season with flaky salt and black pepper to taste."],
+#       meal_category: "Lunch",
+#       org_category: "Quick Pastas",
+#       author: "Sarah Copeland",
+#       image_url: "https://cft-cooking-seeds.s3.us-west-1.amazonaws.com/aws-fullstack-images/spaghetti-garlic-burrata.jpeg"
+#     )
 
-    Recipe.create!(
-      name: "Crispy Gnocchi With Burst Tomatoes and Mozzarella",
-      cooking_time: "25 minutes",
-      description: "Pan-fried gnocchi is like a faster version of baked pasta. Store-bought gnocchi can simply be browned in a pan for an exciting mix of crispy outsides and chewy middles, no boiling required. This dish is studded with juicy tomatoes and melty pockets of mozzarella. Cherry tomatoes are reliably more flavorful year-round than larger, more watery varieties like beefsteak and heirloom. (That said, taste yours, and if they’re more tart than sweet, add ½ teaspoon sugar in Step 2.) Toss the tomatoes with browned butter, red-pepper flakes and garlic, then hit them with a little heat, and they’ll burst into a bright sauce. Stir in the gnocchi, dot with mozzarella, then broil until the cheese is molten and the tomatoes are blistered in spots.",
-      ingredients: ["Yield: 4 servings", "2 tablespoons extra-virgin olive oil, plus more as needed",
-    "2 (12- to 18-ounce) packages shelf-stable or refrigerated potato gnocchi", 
-  "¼ cup unsalted butter", "4garlic cloves, thinly sliced", "¼ teaspoon red-pepper flakes, plus more for serving",
-"Kosher salt and black pepper", "2 pints small tomatoes, such as cherry, grape or Sungold",
-"¼ cup thinly sliced or torn basil leaves (optional), plus more for serving",
-"8 ounces fresh mozzarella, cut or torn into ½-inch pieces"],
-      preparation: ["Heat the broiler with a rack about 6 inches from the heat source.",
-    "In a large (12-inch) skillet on the stovetop, heat enough olive oil to lightly coat the bottom of the pan (about 1 tablespoon) over medium-high. Add half the gnocchi to the pan, breaking up any that are stuck together. Cover with a lid or baking sheet and cook, undisturbed, until golden brown on one side, 2 to 4 minutes. Transfer to a medium bowl. Repeat with the remaining gnocchi and olive oil.",
-  "Add the butter to the skillet and cook over medium-high, stirring often, until golden-brown and toasty, 1 to 2 minutes. Add the garlic, red-pepper flakes, 1½ teaspoons salt and a few grinds of pepper, reducing the heat slightly if necessary to avoid scorching. Add the tomatoes and 3 tablespoons water and cook, shaking the pan occasionally, until the tomatoes have softened and the liquid has slightly thickened, 4 to 6 minutes. Smash the tomatoes as they burst to help them along.",
-"Add the seared gnocchi and ¼ cup basil (if using), stir to coat, then shake into an even layer. Top with the mozzarella and drizzle lightly with olive oil. Broil until the cheese is melted and browned in spots, 2 to 4 minutes. Top with more basil, red-pepper flakes and black pepper as desired."],
-      meal_category: "Dinner",
-      org_category: "Quick Pastas",
-      author: "Ali Slagle",
-      image_url: "https://cft-cooking-seeds.s3.us-west-1.amazonaws.com/aws-fullstack-images/crispy-gnocchi.jpeg"
-    )
+#     Recipe.create!(
+#       name: "Crispy Gnocchi With Burst Tomatoes and Mozzarella",
+#       cooking_time: "25 minutes",
+#       description: "Pan-fried gnocchi is like a faster version of baked pasta. Store-bought gnocchi can simply be browned in a pan for an exciting mix of crispy outsides and chewy middles, no boiling required. This dish is studded with juicy tomatoes and melty pockets of mozzarella. Cherry tomatoes are reliably more flavorful year-round than larger, more watery varieties like beefsteak and heirloom. (That said, taste yours, and if they’re more tart than sweet, add ½ teaspoon sugar in Step 2.) Toss the tomatoes with browned butter, red-pepper flakes and garlic, then hit them with a little heat, and they’ll burst into a bright sauce. Stir in the gnocchi, dot with mozzarella, then broil until the cheese is molten and the tomatoes are blistered in spots.",
+#       ingredients: ["Yield: 4 servings", "2 tablespoons extra-virgin olive oil, plus more as needed",
+#     "2 (12- to 18-ounce) packages shelf-stable or refrigerated potato gnocchi", 
+#   "¼ cup unsalted butter", "4garlic cloves, thinly sliced", "¼ teaspoon red-pepper flakes, plus more for serving",
+# "Kosher salt and black pepper", "2 pints small tomatoes, such as cherry, grape or Sungold",
+# "¼ cup thinly sliced or torn basil leaves (optional), plus more for serving",
+# "8 ounces fresh mozzarella, cut or torn into ½-inch pieces"],
+#       preparation: ["Heat the broiler with a rack about 6 inches from the heat source.",
+#     "In a large (12-inch) skillet on the stovetop, heat enough olive oil to lightly coat the bottom of the pan (about 1 tablespoon) over medium-high. Add half the gnocchi to the pan, breaking up any that are stuck together. Cover with a lid or baking sheet and cook, undisturbed, until golden brown on one side, 2 to 4 minutes. Transfer to a medium bowl. Repeat with the remaining gnocchi and olive oil.",
+#   "Add the butter to the skillet and cook over medium-high, stirring often, until golden-brown and toasty, 1 to 2 minutes. Add the garlic, red-pepper flakes, 1½ teaspoons salt and a few grinds of pepper, reducing the heat slightly if necessary to avoid scorching. Add the tomatoes and 3 tablespoons water and cook, shaking the pan occasionally, until the tomatoes have softened and the liquid has slightly thickened, 4 to 6 minutes. Smash the tomatoes as they burst to help them along.",
+# "Add the seared gnocchi and ¼ cup basil (if using), stir to coat, then shake into an even layer. Top with the mozzarella and drizzle lightly with olive oil. Broil until the cheese is melted and browned in spots, 2 to 4 minutes. Top with more basil, red-pepper flakes and black pepper as desired."],
+#       meal_category: "Dinner",
+#       org_category: "Quick Pastas",
+#       author: "Ali Slagle",
+#       image_url: "https://cft-cooking-seeds.s3.us-west-1.amazonaws.com/aws-fullstack-images/crispy-gnocchi.jpeg"
+#     )
 
     # Recipe.create!(
     #   name: "",

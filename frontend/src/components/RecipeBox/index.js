@@ -5,6 +5,7 @@ import { getRecipes,fetchSavedRecipes } from '../../store/recipes';
 import { useEffect } from 'react';
 import { deleteSavedRecipe, saveRecipe } from '../../store/savedRecipes';
 import CategorySidebar from '../CategorySidebar';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 
 function RecipeBox() {
     
@@ -32,6 +33,7 @@ function RecipeBox() {
     };
 
     return (
+        <>
         <div className="recipe-box-container">
             <div className="recipe-box-sidebar">
                 <div id="sidebar-saved-recipes-text-container">
@@ -67,6 +69,27 @@ function RecipeBox() {
                 </div>
             </div>
         </div>
+        <div className="about-us-container">
+                <div id="about-us-text">
+                    <h3>ABOUT US</h3>
+                    <p>
+                    CFT Cooking is a subscription service of The Chew Fork Times. It is a digital cookbook and cooking guide alike, available on all platforms, that helps home cooks of every level discover, save and organize the world’s best recipes, while also helping them become better, more competent cooks. Subscribe now for full access.
+                    </p>
+                    <br/>
+                    <div id="links-container">
+                        <a href="https://github.com/hannadarwish">
+                            {<AiFillGithub />}
+                        </a>
+                        <a href="https://www.linkedin.com/in/hanna-darwish-89a34777/">
+                            {<AiFillLinkedin />}
+                        </a>
+                    </div>
+                </div>
+                <div id="links-section">
+                    {/* Links Section */}
+                </div>
+            </div>
+    </>
     );
 }
 

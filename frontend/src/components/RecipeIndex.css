@@ -1,11 +1,19 @@
 
 .recipe-index-container {
-    margin-left: 100px;
+    margin-left: 50px;
     margin-right: 100px;
 }
 
 .lovely-layer-cakes-carousel, .trending-recipes-carousel {
     border-top: 6px solid #222;
+    margin-top: 50px;
+}
+
+.trending-recipes-carousel {
+    margin-bottom: 50px;
+}
+
+.more-from-our-editors {
     margin-top: 50px;
 }
 
@@ -28,4 +36,39 @@
     margin-bottom: 20px;
     letter-spacing: .4px;
     line-height: 1.2;
+}
+
+.about-us-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    letter-spacing: .01em;
+    line-height: 1.5;
+    background-color: black;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+#about-us-text{
+    padding-right: 50px;
+    padding-left: 50px;
+    font-size: 18px;
+}
+
+#about-us-text h3{
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+#about-us-text a {
+    color:white;
+    font-size: 30px;
+}
+
+#links-container {
+    display: flex;
+    gap: 10px;
 }

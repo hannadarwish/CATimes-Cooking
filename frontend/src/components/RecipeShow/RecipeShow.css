@@ -104,18 +104,6 @@
     line-height: 1.5;
 }
 
-.about-us-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    letter-spacing: .01em;
-    line-height: 1.5;
-}
-
-#about-us-text {
-    padding-right: 50px;
-}
-
 #cooking-notes-text, #ratings-text, #ingredients-text, #preparation-text {
     font-family: 'Patua One', cursive;
     letter-spacing: .08em;

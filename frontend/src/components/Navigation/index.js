@@ -35,7 +35,7 @@ function Navigation() {
                 </NavLink>
             </div>
             <li className="nav-buttons">
-                <NavLink className ="easy-weeknight-dinners-nav"exact to="/easyweeknightdinners">Easy Weeknight Dinners</NavLink>
+                {/* <NavLink className ="easy-weeknight-dinners-nav"exact to="/easyweeknightdinners">Easy Weeknight Dinners</NavLink> */}
                 {sessionLinks}
             </li>
         </ul>

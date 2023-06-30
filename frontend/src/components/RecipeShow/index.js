@@ -8,6 +8,7 @@ import CookingNotesForm from '../CookingNotesForm';
 import CookingNotesIndex from '../CookingNotesIndex';
 import LoginForm from '../LoginFormModal/LoginForm';
 import { Modal } from '../../context/Modal';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 
 export default function RecipeShow() {
 
@@ -37,6 +38,7 @@ export default function RecipeShow() {
     console.log(JSON.parse(recipe.ingredients))
     
     return (
+        <>
         <div className='recipe-show-container'>
             <div className="recipe-header-container">
                 <div id="recipe-name-box">
@@ -82,10 +84,10 @@ export default function RecipeShow() {
                 <div id="ratings-section">
                     <p id="ratings-text">RATINGS</p>
                     <div id="stars-container">
-                        Stars Section
+                        {/* Stars Section */}
                     </div>
                     <div id="your-rating-stars">
-                        Your rating
+                        {/* Your rating */}
                     </div>
                 </div>
                 <div id="cooking-notes-container">
@@ -100,18 +102,28 @@ export default function RecipeShow() {
                     <p>Get recipes, tips and CFT special offers delivered straight to your inbox. Opt out or contact us anytime. See our Privacy Policy.</p> */}
                 </div>
             </div>
-            <div className="about-us-container">
+        </div>
+        <div className="about-us-container">
                 <div id="about-us-text">
-                    {/* <h3>About Us</h3>
+                    <h3>ABOUT US</h3>
                     <p>
                     CFT Cooking is a subscription service of The Chew Fork Times. It is a digital cookbook and cooking guide alike, available on all platforms, that helps home cooks of every level discover, save and organize the world’s best recipes, while also helping them become better, more competent cooks. Subscribe now for full access.
-                    </p> */}
+                    </p>
+                    <br/>
+                    <div id="links-container">
+                        <a href="https://github.com/hannadarwish">
+                            {<AiFillGithub />}
+                        </a>
+                        <a href="https://www.linkedin.com/in/hanna-darwish-89a34777/">
+                            {<AiFillLinkedin />}
+                        </a>
+                    </div>
                 </div>
                 <div id="links-section">
                     {/* Links Section */}
                 </div>
             </div>
-        </div>
+    </>
     )
     
 

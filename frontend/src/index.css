@@ -61,3 +61,8 @@ html {
 	height: 100%;
 	width: 100%;
 }
+
+.cool-div {
+	display: flex;
+	flex-direction: column;
+}

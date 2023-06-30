@@ -10,7 +10,7 @@ import RecipeShow from "./components/RecipeShow";
 function App() {
 
   return (
-    <>
+    <div className="cool-div">
       <Navigation />
         <Switch>
           <Route exact path="/">
@@ -27,7 +27,7 @@ function App() {
             <EasyWeeknightDinners />
           </Route>
         </Switch>
-    </>
+    </div>
   );
 }
 

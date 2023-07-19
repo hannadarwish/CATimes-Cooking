@@ -73,6 +73,15 @@ export default function RecipeShow() {
                     <div id="preparation"> 
                         <p id="preparation-text">PREPARATION</p>
                         <ol>
+                            {recipe.preparation.split(' | ').map((step, index) => (
+                                <li className="steps-text" key={index}>
+                                <span id="step-text">Step {index + 1}:</span>
+                                <br/>
+                                {step}
+                                </li>
+                            ))}
+                        </ol>
+                        {/* <ol>
                             {JSON.parse(recipe.preparation).map((step, index) => (
                             <li className="steps-text" key={index}>
                                 <span id="step-text">Step {index + 1}:</span>
@@ -80,7 +89,7 @@ export default function RecipeShow() {
                                 {step}
                             </li>
                             ))}
-                        </ol>
+                        </ol> */}
                     </div>
                 </div>
                 <div className="ratings-notes-container">

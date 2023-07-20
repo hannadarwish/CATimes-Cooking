@@ -62,7 +62,7 @@ export default function RecipeShow() {
                     <div id="ingredients">
                         <p id="ingredients-text">INGREDIENTS</p>
                         <ul>
-                            {recipe.ingredients.split(',').map((ingredient, index) => (
+                            {recipe.ingredients.split('|').map((ingredient, index) => (
                                 <li id="ingredients-list-items" key={index}>{ingredient.trim()}</li>
                             ))}
                             {/* {JSON.parse(recipe.ingredients).map((ingredient, index) => (
@@ -73,14 +73,27 @@ export default function RecipeShow() {
                     <div id="preparation"> 
                         <p id="preparation-text">PREPARATION</p>
                         <ol>
-                            {recipe.preparation.split(' | ').map((step, index) => (
+                            {recipe.preparation.split('\n').map((step, index) => {
+                                // Remove step number and extra text
+                                const cleanedStep = step.replace(`Step ${index + 1} `, '');
+                                return (
                                 <li className="steps-text" key={index}>
-                                <span id="step-text">Step {index + 1}:</span>
-                                <br/>
-                                {step}
+                                    <span id="step-text">Step {index + 1}:</span>
+                                    <br/>
+                                    {cleanedStep}
+                                </li>
+                                );
+                            })}
+                        </ol>
+                        {/* <ol>
+                            {recipe.preparation.split('|').map((step, index) => (
+                                <li className="steps-text" key={index}>
+                                    <span id="step-text">Step {index + 1}:</span>
+                                    <br/>
+                                    {step}
                                 </li>
                             ))}
-                        </ol>
+                        </ol> */}
                         {/* <ol>
                             {JSON.parse(recipe.preparation).map((step, index) => (
                             <li className="steps-text" key={index}>

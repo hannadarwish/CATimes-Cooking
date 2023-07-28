@@ -14,8 +14,6 @@ export default function RecipeShow() {
 
     const { recipeId } = useParams();
     const recipe = useSelector(getRecipe(recipeId));
-    console.log("HELLO")
-    console.log(recipe);
     const dispatch = useDispatch();
     const [showLoginModal, setShowLoginModal] = useState(false);
     const isLoggedIn = useSelector(state => state.session.user);
@@ -35,6 +33,10 @@ export default function RecipeShow() {
         return <div>{showLoginModal && <Modal onClose={() => setShowLoginModal(false)}><LoginForm /></Modal>}</div>; // Render a loading state while fetching the recipe
     }
     // debugger
+    console.log("Ingredients")
+    console.log(recipe.ingredients)
+    console.log("Preparation")
+    console.log(recipe.preparation)
     return (
         <>
         { recipe ? 
@@ -65,25 +67,18 @@ export default function RecipeShow() {
                             {recipe.ingredients.split('|').map((ingredient, index) => (
                                 <li id="ingredients-list-items" key={index}>{ingredient.trim()}</li>
                             ))}
-                            {/* {JSON.parse(recipe.ingredients).map((ingredient, index) => (
-                                <li id="ingredients-list-items" key={index}>{ingredient}</li>
-                            ))} */}
                         </ul> 
                     </div >
                     <div id="preparation"> 
                         <p id="preparation-text">PREPARATION</p>
                         <ol>
-                            {recipe.preparation.split('\n').map((step, index) => {
-                                // Remove step number and extra text
-                                const cleanedStep = step.replace(`Step ${index + 1} `, '');
-                                return (
+                            {recipe.preparation.split('\n').map((step, index) => (
                                 <li className="steps-text" key={index}>
                                     <span id="step-text">Step {index + 1}:</span>
-                                    <br/>
-                                    {cleanedStep}
+                                <br/>
+                                {step}
                                 </li>
-                                );
-                            })}
+                            ))}
                         </ol>
                         {/* <ol>
                             {recipe.preparation.split('|').map((step, index) => (
